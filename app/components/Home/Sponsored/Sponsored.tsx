@@ -36,7 +36,7 @@ function Sponsored() {
         </div>
 
         <div className='flex justify-center items-center mt-12 mb-8'>
-            <Link href={"mailto:aura@aliah.ac.in"} className='px-6 py-[0.3rem] rounded-full bg-green-500 font-[900] text-[1.0rem] font-merriweather flex items-center justify-center gap-2'> Sponsor Us</Link>
+            <Link href={"mailto:aura@aliah.ac.in"} className='px-6 py-[0.3rem] rounded-full bg-green-500 font-[900] text-[1.0rem] font-merriweather flex items-center justify-center gap-2'>Call for Sponsorship</Link>
         </div>
     </div>
     
