@@ -28,6 +28,19 @@ const Mentors = [
         programDesignation:"Co-Convener",
         designation:"Associate Professor, Dept. of Mechanical Engineering"
     },
+ 
+    {
+        name:"Prof Md. Mehedi Kalam",
+        picture:'/assets/team/mentor/MK.jpg', 
+        programDesignation:"Executive Member",
+        designation:"Associate Professor,Dept. of Physics"
+    },
+    {
+        name:"Dr. Samiran Sur",
+        picture:'/assets/team/mentor/SS.jpg', 
+        programDesignation:"Executive Member",
+        designation:"Dept. of Management & Business Administratio"
+    },
     {
         name:"Dr. Sk Md Obaidullah",
         picture:Obaidullah, 
@@ -38,31 +51,31 @@ const Mentors = [
         name:"Dr. Quazi Mohmmad Alfred",
         picture:"/assets/team/mentor/QMA.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Dept. of Electronics And Communication Engineering"
+        designation:"Associate Professor, Dept. of Electronics And Communication Engineering"
     },
     {
         name:"Dr. Indranil Mukherjee",
         picture:"/assets/team/mentor/Indrajit_Sir.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Department of Civil Engineering,"
+        designation:"Associate Professor, Department of Civil Engineering,"
     },
     {
         name:"Mr. Jakir Hossain Molla",
         picture:"/assets/team/mentor/Jakir_Sir.jpg", 
-        programDesignation:"Training &amp; Placement Officer,", 
-        designation:"Executive Member"
+        programDesignation:"Executive Member ", 
+        designation:"Training & Placement Officer"
     },
     {
         name:"Mr. Shaikh Rizwan",
         picture:"/assets/team/mentor/Rizwan_sir.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Finance Section,"
+        designation:"Finance Section"
     },
     {
         name:"Mr. Asif Iqbal",
         picture:"/assets/team/mentor/Asif_Iqbal.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Dept. of Computer Science &amp; Engineering,"
+        designation:"Dept. of Computer Science & Engineering"
     }
 
 ]

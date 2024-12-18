@@ -1,5 +1,5 @@
 import React from 'react'
-import Map from './Map'
+// import Map from './Map'
 import { SlCalender } from 'react-icons/sl'
 import { FaLinkedin, FaLocationDot } from 'react-icons/fa6'
 import Link from 'next/link'
@@ -7,6 +7,11 @@ import { FaFacebookSquare } from 'react-icons/fa'
 import { IoLogoYoutube } from 'react-icons/io'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import('./Map'), { ssr: false });
+
+
 
 function Footer() {
     const router = useRouter();
@@ -34,7 +39,7 @@ function Footer() {
             <div>
                 <div className='text-[0.9rem] font-semibold w-full'>VENUE</div>
                 <div className='w-full'>
-                    <Map location={Location}/>
+                    {/* <Map location={Location}/> */}
                     <div className=' text-[0.9rem] mt-4 flex items-center gap-2 text-yellow-500 font-merriweather font-semibold' ><SlCalender/> <span>25<sup>th</sup>, 27<sup>th</sup> February, 2025</span></div>
                     <div className='font-merriweather text-[0.9rem] flex items-center gap-2 mt-2 font-semibold'><FaLocationDot/> Aliah University, Newtown Campus</div>
                 </div>

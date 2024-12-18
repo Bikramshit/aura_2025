@@ -90,6 +90,11 @@ function Register() {
       member.name && member.email && member.rollNo && member.dept && member.number && member.file
     );
 
+    if(!isValid){
+      toast.error("All the fields are mandatory.");
+      setLoading(false);
+      return;
+    }
 
 
 
