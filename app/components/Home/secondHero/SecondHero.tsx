@@ -19,7 +19,7 @@ function SecondHero() {
                       Mission is to provide a platform for showcasting technical prowess, promoting knowledge exchange, and nururing future leaders in technology.
                     </div>
                     <div className='mt-4'>
-                    <span className='font-bold text-yellow-500'>Venue[In-Person]:</span> Aliah Univeristy (Newtown Campus)
+                    <span className='font-bold text-yellow-500'>Venue[In-Person]:</span> Aliah University (Newtown Campus)
                     <div><span className='font-bold text-yellow-500'>Dates:</span>25<sup>th</sup>, 27<sup>th</sup> February, 2024</div>
 
                     </div>

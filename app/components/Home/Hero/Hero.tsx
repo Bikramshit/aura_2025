@@ -19,7 +19,7 @@ function LandingPage() {
             <span className='absolute left-0 right-0 bottom-[-0.5rem] border-b border-[#383b3a]'></span>
             Explore cutting-edge advancements, inspiring ideas, and transformative technologies at AURA </div> */}
             <div className='mt-0 md:mt-8 text-center'>
-                <div className='py-[0.6rem] px-4  rounded-md flex items-baseline md:items-center md:gap-4 font-[600] font-merriweather'><SlCalender/> <span>25<sup>th</sup>, 27<sup>th</sup> February, 2024, Aliah Univeristy</span> </div>
+                <div className='py-[0.6rem] px-4  rounded-md flex items-baseline md:items-center md:gap-4 font-[600] font-merriweather'><SlCalender/> <span>25<sup>th</sup>, 27<sup>th</sup> February, 2024, Aliah University</span> </div>
             </div>
         <div className='my-4 '>
         <Link className='px-4 py-[0.45rem] rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>Submit the abstract</Link>

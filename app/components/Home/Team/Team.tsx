@@ -39,7 +39,7 @@ const Mentors = [
         name:"Dr. Samiran Sur",
         picture:'/assets/team/mentor/SS.jpg', 
         programDesignation:"Executive Member",
-        designation:"Dept. of Management & Business Administratio"
+        designation:"Dept. of Management & Business Administration"
     },
     {
         name:"Dr. Sk Md Obaidullah",
@@ -57,7 +57,7 @@ const Mentors = [
         name:"Dr. Indranil Mukherjee",
         picture:"/assets/team/mentor/Indrajit_Sir.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Associate Professor, Department of Civil Engineering,"
+        designation:"Associate Professor, Department of Civil Engineering"
     },
     {
         name:"Mr. Jakir Hossain Molla",
@@ -90,7 +90,7 @@ const Teams = [
   
     {
         name:"Kaustav Chakraborty",
-        picture:"", 
+        picture:"/assets/team/volunteer/Kaustab.jpg", 
         designation:"Team Lead"
     },
     {
@@ -101,27 +101,32 @@ const Teams = [
   
     {
         name:"Md Wasim Jafor SK",
-        picture:"", 
+        picture:"/assets/team/volunteer/wasim.jpeg", 
         designation:"Team Lead"
     },
     {
         name:"Narmajit Saha",
-        picture:"", 
+        picture:"/assets/team/volunteer/Narmajit.jpg", 
         designation:"Team Lead"
     },
     {
         name:"Mohd Sajid Siddiqui",
-        picture:"", 
+        picture:"/assets/team/volunteer/Sajid.jpeg", 
         designation:"Team Lead"
     },
     {
+        name:"Sk Kutub Uddin",
+        picture:"/assets/team/volunteer/Kutub.jpeg", 
+        designation:"Member"
+    },
+    {
         name:"Aadil Jabbiulla",
-        picture:"", 
+        picture:"/assets/team/volunteer/Aadil.jpeg", 
         designation:"Member"
     },
     {
         name:"Kazi Ashique Ahmed",
-        picture:"", 
+        picture:"/assets/team/volunteer/Ashique.jpeg", 
         designation:"Member"
     },
     {
@@ -132,12 +137,12 @@ const Teams = [
     
     {
         name:"Sefat Jahan",
-        picture:"", 
+        picture:"/assets/team/volunteer/Sefat.jpg", 
         designation:"Member"
     },
     {
         name:"Sariful Islam",
-        picture:"", 
+        picture:"/assets/team/volunteer/Sariful.jpeg", 
         designation:"Member"
     },
     {
@@ -177,20 +182,16 @@ const Teams = [
     },
     {
         name:"Arayan Sarkar",
-        picture:"", 
+        picture:"/assets/team/volunteer/Aryaan.jpeg", 
         designation:"Member"
     },
    
     {
         name:"Md Wajid",
-        picture:"", 
+        picture:"/assets/team/volunteer/Wajid.jpeg", 
         designation:"Member"
     },
-    {
-        name:"Sk Kutub Uddin",
-        picture:"", 
-        designation:"Member"
-    },
+    
    
 ]
 
