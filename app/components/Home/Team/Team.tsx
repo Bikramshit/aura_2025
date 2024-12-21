@@ -153,7 +153,7 @@ const Teams = [
     },
     {
         name:"Md Ahshan Ahmad",
-        picture:"", 
+        picture:"/assets/team/volunteer/Ahshan.jpeg", 
         designation:"Member"
     },
     {
