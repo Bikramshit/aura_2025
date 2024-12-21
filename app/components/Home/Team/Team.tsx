@@ -95,7 +95,7 @@ const Teams = [
     },
     {
         name:"Bikram Shit",
-        picture:"", 
+        picture:"/assets/team/volunteer/Bikram.JPG", 
         designation:"Tech Head"
     },
   
@@ -105,7 +105,7 @@ const Teams = [
         designation:"Team Lead"
     },
     {
-        name:"Narmajit Saha",
+        name:"Namrajit Saha",
         picture:"/assets/team/volunteer/Narmajit.jpg", 
         designation:"Team Lead"
     },
@@ -113,6 +113,11 @@ const Teams = [
         name:"Mohd Sajid Siddiqui",
         picture:"/assets/team/volunteer/Sajid.jpeg", 
         designation:"Team Lead"
+    },
+    {
+        name:"Sayani Banarjee",
+        picture:"/assets/team/volunteer/Sayani.jpeg", 
+        designation:"Member"
     },
     {
         name:"Sk Kutub Uddin",
@@ -124,17 +129,13 @@ const Teams = [
         picture:"/assets/team/volunteer/Aadil.jpeg", 
         designation:"Member"
     },
+    
+    
     {
         name:"Kazi Ashique Ahmed",
         picture:"/assets/team/volunteer/Ashique.jpeg", 
         designation:"Member"
     },
-    {
-        name:"Sayani Banarjee",
-        picture:"", 
-        designation:"Member"
-    },
-    
     {
         name:"Sefat Jahan",
         picture:"/assets/team/volunteer/Sefat.jpg", 
@@ -147,6 +148,11 @@ const Teams = [
     },
     {
         name:"Md Shaif Ali",
+        picture:"", 
+        designation:"Member"
+    },
+    {
+        name:"Md Ahshan Ahmad",
         picture:"", 
         designation:"Member"
     },
@@ -177,7 +183,7 @@ const Teams = [
     },
     {
         name:"SK Sohel Islam",
-        picture:"", 
+        picture:"/assets/team/volunteer/Sohel.jpeg", 
         designation:"Member"
     },
     {
@@ -191,7 +197,44 @@ const Teams = [
         picture:"/assets/team/volunteer/Wajid.jpeg", 
         designation:"Member"
     },
-    
+    {
+        name:"Romana Hayat",
+        picture:"", 
+        designation:"Member" 
+    },
+    {
+        name:"Musarrat Jahan",
+        picture:"", 
+        designation:"Member" 
+    }
+    ,
+    {
+        name:"Rameez Reza",
+        picture:"", 
+        designation:"Member" 
+    }
+    ,
+    {
+        name:"Arsalan Sabbir",
+        picture:"", 
+        designation:"Member" 
+    }
+    ,
+    {
+        name:"Shilpa Pan",
+        picture:"", 
+        designation:"Member" 
+    },
+    {
+        name:"Badruddoja",
+        picture:"", 
+        designation:"Member" 
+    },
+    {
+        name:"Aabir",
+        picture:"", 
+        designation:"Member" 
+    }
    
 ]
 

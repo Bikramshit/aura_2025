@@ -157,7 +157,7 @@ function Register() {
         </div>
 
         <div className="text-center text-[1.3rem] md:text-[1.6rem] font-semibold mt-2 text-[#2aa1f5] font-merriweather">
-          Abstract Applicaiton Form
+          Abstract Application Form
         </div>
 
         <div className="px-4 md:px-[3rem] py-8">
