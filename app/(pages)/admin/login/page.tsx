@@ -1,9 +1,14 @@
+import AdminLogin from '@/app/components/admin/Login/AdminLogin';
 import React from 'react'
 
-function AdminLogin() {
+function Page() {
   return (
-    <div>AdminLogin</div>
+    <>
+    
+    <AdminLogin />
+    
+    </>
   )
 }
 
-export default AdminLogin
+export default Page;

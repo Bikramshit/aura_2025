@@ -39,7 +39,7 @@ const Mentors = [
         name:"Dr. Samiran Sur",
         picture:'/assets/team/mentor/SS.jpg', 
         programDesignation:"Executive Member",
-        designation:"Dept. of Management & Business Administration"
+        designation:"Associate Professor, Dept. of Management & Business Administration"
     },
     {
         name:"Dr. Sk Md Obaidullah",
@@ -148,7 +148,7 @@ const Teams = [
     },
     {
         name:"Md Shaif Ali",
-        picture:"", 
+        picture:"/assets/team/volunteer/Shaif.jpeg", 
         designation:"Member"
     },
     {
@@ -163,7 +163,7 @@ const Teams = [
     },
     {
         name:"Kaifee Azmi",
-        picture:"", 
+        picture:"/assets/team/volunteer/Kaifee.jpeg", 
         designation:"Member"
     },{
         name:"Rafikun Nesa",
@@ -187,7 +187,7 @@ const Teams = [
         designation:"Member"
     },
     {
-        name:"Arayan Sarkar",
+        name:"Ariyan Sarkar",
         picture:"/assets/team/volunteer/Aryaan.jpeg", 
         designation:"Member"
     },
@@ -231,7 +231,7 @@ const Teams = [
         designation:"Member" 
     },
     {
-        name:"Aabir",
+        name:"Abir Siddique",
         picture:"", 
         designation:"Member" 
     }
@@ -260,9 +260,9 @@ function Team() {
             <div className='grid grid-cols-1 md:grid-cols-3  gap-12 mt-6'>
                 {
                     Mentors.map((mentor)=>(
-                        <div key={mentor.name} className='border bg-white rounded-md p-4 pt-6'>
+                        <div key={mentor.name} className=' bg-white rounded-md overflow-hidden p-4 pt-6'>
                                 <div className='h-[10rem] flex items-center justify-center'>
-                                    <Image src={mentor.picture} alt='' height={100} width={100} unoptimized className='h-full w-auto object-cover rounded-md shadow-md' />
+                                    <Image src={mentor.picture} alt='' height={100} width={100} unoptimized className='h-full w-auto object-cover rounded-md border shadow-md' />
                                 </div>
                                 <div className='text-black'>
                                 <div className='text-[1.0rem] mt-2 font-semibold text-center logo_font'>{mentor.name}</div>
@@ -286,9 +286,9 @@ function Team() {
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-6'>
                 {
                     Teams.map((team)=>(
-                        <div key={team.name} className='border bg-white rounded-md p-4 pt-6'>
+                        <div key={team.name} className=' bg-white rounded-md p-4 pt-6 overflow-hidden '>
                                 <div className='h-[10rem] flex items-center justify-center'>
-                                    <Image src={team.picture} alt='' height={100} width={100} unoptimized className='h-full w-auto object-cover rounded-md shadow-md' />
+                                    <Image src={team.picture} alt='' height={100} width={100} unoptimized className='h-full w-auto object-cover border rounded-md shadow-md' />
                                 </div>
                                 <div className='text-black'>
                                 <div className='text-[1.0rem] mt-2 font-semibold text-center logo_font'>{team.name}</div>
