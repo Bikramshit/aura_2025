@@ -272,7 +272,9 @@ function Register() {
             </div>
           </div>
 
-
+          <div className="text-[0.95rem] text-yellow-500">
+          Please ensure that each file is less than 400KB 
+          </div>
          
 
          <div className="pt-4">

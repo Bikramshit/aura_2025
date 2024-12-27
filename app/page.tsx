@@ -10,6 +10,7 @@ import Sponsored from './components/Home/Sponsored/Sponsored'
 import EventSchedule from './components/Home/EventSchedule/EventSchedule'
 import ContactUs from './components/Home/contactUs/ContactUs'
 import Footer from './components/Home/Footer/Footer'
+import Reward from './components/Home/Reward/Reward';
 function HomePage() {
 
   const handleNavigate = (id:string) => {
@@ -33,10 +34,14 @@ function HomePage() {
    <div id='gallery'>
    <PreviousGlimpses />
    </div>
+
    <div id='eventSchedule'>
    <EventSchedule />
    </div>
-   <Sponsored />
+   <div>
+    <Reward />
+   </div>
+   {/* <Sponsored /> */}
 
 <div id='teams'>
 <Team />
@@ -47,7 +52,10 @@ function HomePage() {
 <ContactUs />
 </div>
 
-   <Footer />
+<div id='footer'>
+<Footer />
+
+</div>
 
 
    </div>

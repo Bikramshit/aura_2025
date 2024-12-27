@@ -1,5 +1,6 @@
 
 "use client";
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { IoReorderThree } from 'react-icons/io5';
@@ -20,17 +21,25 @@ function Header({onNavigate}:Props) {
    <div className=' px-4 py-4 shadow-md border-b border-[#1f2020] font-merriweather' >   
        <div className='flex justify-between md:justify-around items-center'>
 
-            <Link href={"/"} className='text-[1.8rem] font-bold logo_font '><span className='text-[#FFD700]'>A</span>URA </Link>
+            <Link href={"/"} className='text-[1.8rem] font-bold logo_font flex items-center gap-1'>
+            <Image src={'/assets/AURA_Logo.png'} alt=''  height={100} width={100} className='h-[4rem] w-[5rem] md:h-[6rem] md:w-[8rem]' unoptimized />
+            <span className='text-[#FFD700]'>A</span>URA </Link>
             <div className='hidden md:flex items-center gap-12 text-[0.9rem] font-[500]  px-10 py-[0.6rem] rounded-full border-[#242424] border shadow-lg bg-[#020a25]'>
                 <button className='hover:underline hover:font-semibold uppercase' onClick={()=>onNavigate("about")}>About</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("gallery")}>Gallery</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("teams")}>Teams</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Contact Us</button>
-                <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("about")}>FAQ</button>
+                <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("footer")}>Resources</button>
+                <Link href={'/assets/Sponsorship_Form.pdf'} target='_blank' className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Sponsor</Link>
+                {/* <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Contact Us</button> */}
+                {/* <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("about")}>FAQ</button> */}
        
         </div>
         <div>
-            <Link className='hidden md:inline text-[0.95rem] py-[0.35rem] px-4 bg-green-600 rounded-full font-semibold text-white' href="/register"> Submit the abstract</Link>
+            <div>
+                <Image src={'/assets/Aliah_University_Logo.png'} alt='' height={100} width={100} className='bg-white rounded-full p-1 md:p-2 h-[3rem] w-[3rem] md:h-[5.5rem] md:w-[5.5rem]'  />
+            </div>
+            {/* <Link className='hidden md:inline text-[0.95rem] py-[0.35rem] px-4 bg-green-600 rounded-full font-semibold text-white' href="/register"> Submit the abstract</Link> */}
         </div>
 
         {/* <div className='md:hidden'>
