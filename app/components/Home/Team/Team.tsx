@@ -75,7 +75,7 @@ const Mentors = [
         name:"Mr. Asif Iqbal",
         picture:"/assets/team/mentor/Asif_Iqbal.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Dept. of Computer Science & Engineering"
+        designation:"Technical Assistant, Dept. of Computer Science & Engineering"
     }
 
 ]
@@ -100,15 +100,16 @@ const Teams = [
     },
   
     {
-        name:"Md Wasim Jafor SK",
-        picture:"/assets/team/volunteer/wasim.jpeg", 
-        designation:"Team Lead"
-    },
-    {
         name:"Namrajit Saha",
         picture:"/assets/team/volunteer/Narmajit.jpg", 
         designation:"Team Lead"
     },
+    {
+        name:"Md Wasim Jafor SK",
+        picture:"/assets/team/volunteer/wasim.jpeg", 
+        designation:"Team Lead"
+    },
+    
     {
         name:"Mohd Sajid Siddiqui",
         picture:"/assets/team/volunteer/Sajid.jpeg", 
@@ -121,7 +122,7 @@ const Teams = [
     },
     {
         name:"Sk Kutub Uddin",
-        picture:"/assets/team/volunteer/Kutub.jpeg", 
+        picture:"/assets/team/volunteer/Jisan.jpg", 
         designation:"Member"
     },
     {
@@ -158,29 +159,30 @@ const Teams = [
     },
     {
         name:"Masuma Khanam",
-        picture:"", 
+        picture:"/assets/team/volunteer/Masuma.jpg", 
         designation:"Member"
     },
     {
         name:"Kaifee Azmi",
         picture:"/assets/team/volunteer/Kaifee.jpeg", 
         designation:"Member"
-    },{
-        name:"Rafikun Nesa",
-        picture:"", 
-        designation:"Member"
     },
-    {
-        name:"Nemat Jahan",
-        picture:"", 
-        designation:"Member"
-    },
+    // {
+    //     name:"Rafikun Nesa",
+    //     picture:"", 
+    //     designation:"Member"
+    // },
+    // {
+    //     name:"Nemat Jahan",
+    //     picture:"", 
+    //     designation:"Member"
+    // },
   
-    {
-        name:"Mohammad Asraf",
-        picture:"", 
-        designation:"Member"
-    },
+    // {
+    //     name:"Mohammad Asraf",
+    //     picture:"", 
+    //     designation:"Member"
+    // },
     {
         name:"SK Sohel Islam",
         picture:"/assets/team/volunteer/Sohel.jpeg", 
@@ -197,42 +199,42 @@ const Teams = [
         picture:"/assets/team/volunteer/Wajid.jpeg", 
         designation:"Member"
     },
-    {
-        name:"Romana Hayat",
-        picture:"", 
-        designation:"Member" 
-    },
-    {
-        name:"Musarrat Jahan",
-        picture:"", 
-        designation:"Member" 
-    }
-    ,
-    {
-        name:"Rameez Reza",
-        picture:"", 
-        designation:"Member" 
-    }
-    ,
-    {
-        name:"Arsalan Sabbir",
-        picture:"", 
-        designation:"Member" 
-    }
-    ,
-    {
-        name:"Shilpa Pan",
-        picture:"", 
-        designation:"Member" 
-    },
-    {
-        name:"Badruddoja",
-        picture:"", 
-        designation:"Member" 
-    },
+    // {
+    //     name:"Romana Hayat",
+    //     picture:"", 
+    //     designation:"Member" 
+    // },
+    // {
+    //     name:"Musarrat Jahan",
+    //     picture:"", 
+    //     designation:"Member" 
+    // }
+    // ,
+    // {
+    //     name:"Rameez Reza",
+    //     picture:"", 
+    //     designation:"Member" 
+    // }
+    // ,
+    // {
+    //     name:"Arsalan Sabbir",
+    //     picture:"", 
+    //     designation:"Member" 
+    // }
+    // ,
+    // {
+    //     name:"Shilpa Pan",
+    //     picture:"", 
+    //     designation:"Member" 
+    // },
+    // {
+    //     name:"Badruddoja",
+    //     picture:"", 
+    //     designation:"Member" 
+    // },
     {
         name:"Abir Siddique",
-        picture:"", 
+        picture:"/assets/team/volunteer/Abir.jpeg", 
         designation:"Member" 
     }
    
@@ -257,7 +259,7 @@ function Team() {
         <div className='font-semibold text-[1.5rem] relative'>
             <div></div> <span className='relative'><span className='absolute left-0 right-0 top-[-0.3rem] h-1 bg-yellow-500 font-semibold mb-8'></span><span className='text-yellow-500'>M</span>ENTORS</span></div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3  gap-12 mt-6'>
+            <div className='grid grid-cols-1 md:grid-cols-3  gap-12 mt-6 mx-4'>
                 {
                     Mentors.map((mentor)=>(
                         <div key={mentor.name} className=' bg-white rounded-md overflow-hidden p-4 pt-6'>
@@ -283,10 +285,10 @@ function Team() {
         <div className='font-semibold text-[1.5rem] relative'>
             <div></div> <span className='relative'><span className='absolute left-0 right-0 top-[-0.3rem] h-1 bg-yellow-500 font-semibold mb-8'></span><span className='text-yellow-500'>T</span>EAMS</span></div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-6'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-12 mt-6'>
                 {
                     Teams.map((team)=>(
-                        <div key={team.name} className=' bg-white rounded-md p-4 pt-6 overflow-hidden '>
+                        <div key={team.name} className=' bg-white rounded-md p-4 md:pt-6 overflow-hidden '>
                                 <div className='h-[10rem] flex items-center justify-center'>
                                     <Image src={team.picture} alt='' height={100} width={100} unoptimized className='h-full w-auto object-cover border rounded-md shadow-md' />
                                 </div>

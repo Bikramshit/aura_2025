@@ -39,7 +39,7 @@ function Footer() {
             <div>
                 <div className='text-[0.9rem] font-semibold w-full'>VENUE</div>
                 <div className='w-full'>
-                    {/* <Map location={Location}/> */}
+                    <Map location={Location}/>
                     <div className=' text-[0.9rem] mt-4 flex items-center gap-2 text-yellow-500 font-merriweather font-semibold' ><SlCalender/> <span>25<sup>th</sup>, 27<sup>th</sup> February, 2025</span></div>
                     <div className='font-merriweather text-[0.9rem] flex items-center gap-2 mt-2 font-semibold'><FaLocationDot/> Aliah University, Newtown Campus</div>
                 </div>
@@ -48,9 +48,10 @@ function Footer() {
                 <div className='text-[0.9rem] font-semibold'>RESOURCES</div>
                 <div className='mt-4 flex flex-col'>
                     <Link href={"/AURA_Poster.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer"> Announcement</Link>
-                    <Link href={"/Guidelines_AURA_2025.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Guidelines</Link>
-                    <Link href={"/assets/AURA_Sponsorship_Brochure.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Brochure</Link>
                     <Link href={"/assets/AURA_2025_RoadMap.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 RoadMap</Link>
+                    <Link href={"/Guidelines_AURA_2025.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Guidelines</Link>
+                    <Link href={"/assets/AURA_Trifold_Brochure.png"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 Brochure</Link>
+                    <Link href={"/assets/AURA_Sponsorship_Brochure.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Brochure</Link>
                 </div>
             </div>
             <div>

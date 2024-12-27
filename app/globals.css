@@ -149,3 +149,13 @@ body {
   /* background-color: #003c81; */
   background: linear-gradient(152deg, rgba(0,60,129,1) 0%, rgba(12, 135, 106) 95%);
 }
+
+.reward_bg{
+  background: rgb(0,0,71);
+  background: linear-gradient(152deg, rgba(0,0,71,1) 0%, rgba(11,14,29,1) 95%);
+}
+
+.reward_item {
+  background: rgb(2,21,22);
+  background: linear-gradient(312deg, rgba(2,21,22,1) 0%, rgba(29,31,108,1) 100%);
+}
