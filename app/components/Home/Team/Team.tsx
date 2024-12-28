@@ -33,13 +33,13 @@ const Mentors = [
         name:"Prof Md. Mehedi Kalam",
         picture:'/assets/team/mentor/MK.jpg', 
         programDesignation:"Executive Member",
-        designation:"Associate Professor,Dept. of Physics"
+        designation:"Professor, Dept. of Physics"
     },
     {
         name:"Dr. Samiran Sur",
         picture:'/assets/team/mentor/SS.jpg', 
         programDesignation:"Executive Member",
-        designation:"Associate Professor, Dept. of Management & Business Administration"
+        designation:"Assistant Professor, Dept. of Management & Business Administration"
     },
     {
         name:"Dr. Sk Md Obaidullah",

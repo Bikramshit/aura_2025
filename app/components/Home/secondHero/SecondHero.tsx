@@ -3,7 +3,7 @@ import React from 'react'
 
 function SecondHero() {
   return (
-    <div className='pb-[5rem] mt-8'>
+    <div className='pb-[5rem] mt-10 md:mt-8'>
 
         <div className='mx-4 md:mx-[10rem] bg-[#07090F] p-4 pt-8 md:p-12 rounded-md shadow-md shadow-black border border-[#202020]'>
             
@@ -12,7 +12,7 @@ function SecondHero() {
                 ABOUT THE UNIVERSITY</span>
             <div className='mt-4 mb-8  font-semibold'>
 
-            Aliah University started its glorious journey from the 2008-09 academic session with great potential and immense opportunities. It is hoped that this university, harmonizing tradition and modernity, will emerge as a unique institution of higher studies and research. As per Aliah University Act 2007, Section 3 (3), it has been conferred the status of a minority educational institution. Aliah University is an autonomous university under the Department of Minority Affairs and Madrasah Education, Government of West Bengal. It is hoped that along with the people of any race, creed, caste or class, this University will play a crucial and leading role in the advancement of higher education for socially and educationally backward classes belonging to the Minorities.
+            Aliah University started its glorious journey from the academic session 2008-09 with great potential and immense visual. It is found that this university is harmonizing our tradition and have emerged as a unique institution for higher education and in research field. As per the Parliament Act, 2007, Section 3 (3), it has conferred the status of a minority educational institution. It is an autonomous body under the Department of Minority Affairs and Madrasah Education, Government of West Bengal. The students belonging to any race, creed, caste or class, this University has played a crucial and leading role in the advancement of higher education in both socially and economically.
             </div>
             
             <div className=' font-semibold  text-yellow-500 '>
@@ -24,9 +24,10 @@ function SecondHero() {
                 <div className='grid grid-cols-1 gap-6 md:gap-0 lg:grid-cols-2 '>
                   
                   <div className='mt-4 md:mt-8 text-white'>
-                    <div>Aura is Aliah University’s flagship technical festival that celebates innovation, creativity and collaboration among students and researchers. started in 2024, AURA has become a hub for technical excellence, inspiring young minds to push boundaries in hardware innovations.</div>
+                    <div>AURA is Aliah University’s flagship technical festival that facilitates innovation, creativity and collaboration with students and research scholars. Started in the year 2024, AURA has turn out to be a hub for technical excellence, inspiring young minds to push the boundaries in the field of hardware innovations.
+                    </div>
                     <div className='mt-4'>
-                      Mission is to provide a platform for showcasting technical prowess, promoting knowledge exchange, and nururing future leaders in technology.
+                    Our Mission is to endow with a platform for showcasing technical prowess, promoting knowledge and encouraging the future leaders in technology.
                     </div>
                     <div className='mt-4'>
                     <span className='font-bold text-yellow-500'>Venue[In-Person]:</span> Aliah University, Newtown Campus

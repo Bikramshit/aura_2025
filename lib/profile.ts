@@ -19,10 +19,19 @@ export const getUserIDFromToken = (token:any)=>{
 export const myProfile = async()=>{
     try {
        
+        const cookieStore =await cookies();
+        const token = cookieStore.get('token')?.value || '';
+        console.log("Token::",token);
+
+        let userId = '';
+        if(token!=='' && token!=null){
+            userId = getUserIDFromToken(token);
+            console.log("UserId::",userId);
+        }
+
         const session =await getUserSesssion();
-        console.log("SESSION:::",session);
         if(session===undefined) return;
-        let userId = session.id;
+         userId = session.id;
        
 
         const user = await db.user.findUnique({
@@ -30,7 +39,6 @@ export const myProfile = async()=>{
                 id:userId 
             }
         });
-        console.log("USER:::",user);
         return user;
                
     } catch (error) {
