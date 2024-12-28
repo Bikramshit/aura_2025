@@ -139,7 +139,10 @@ body {
 }
 
 .contactUs {
-  background: linear-gradient(152deg, rgb(12, 135, 106) 0%, rgba(0,60,129,1) 95%);
+  background: rgb(6,3,6);
+background: linear-gradient(312deg, rgba(6,3,6,1) 0%, rgba(60,19,74,1) 100%);
+
+  /* background: linear-gradient(152deg, rgb(12, 135, 106) 0%, rgba(0,60,129,1) 95%); */
   transition: background 5s ease;
   /* background-color: #1ab691;
   transition: background-color 2s ease; */
