@@ -23,7 +23,7 @@ function DashboardComponent({title, children}:Props) {
         <SidebarTrigger />
         <div className='font-semibold #f3f3f3z'>{title}</div>
         </div>
-        <div className='overflow-scroll no-scrollbar'>
+        <div className='overflow-scroll no-scrollbar h-[calc(100vh-50px)] no-scrollbar'>
         {children}
         
         </div>
