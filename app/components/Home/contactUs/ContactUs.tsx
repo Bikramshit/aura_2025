@@ -7,10 +7,10 @@ function ContactUs() {
   return (
     <>
     
-    <div className='mx-4 sm:mx-[5rem] md:mx-[8rem] lg:mx-[15rem]  my-20 pb-12 relative'>
+    <div className='mx-4 sm:mx-[5rem] md:mx-[8rem] lg:mx-[15rem]  my-20 pb-12 relative '>
 
      
-            <button className="relative  text-white contactUs text-2xl font-bold tracking-wide  rounded-xl overflow-hidden mt-2 w-full p-8 text-[1.2rem]">
+            <button className="relative  text-white contactUs text-2xl font-bold tracking-wide  rounded-xl overflow-hidden mt-2 w-full p-8 text-[1.2rem] shadow-lg border border-slate-800">
      <div className='py-1'>
        
      <div className='text-center font-inter font-bold text-[2rem] text-yellow-500 uppercase'>Contact Us</div>
