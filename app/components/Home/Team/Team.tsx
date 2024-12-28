@@ -66,10 +66,10 @@ const Mentors = [
         designation:"Training & Placement Officer"
     },
     {
-        name:"Mr. Shaikh Rizwan",
+        name:"Jb. Shaikh Rizwan",
         picture:"/assets/team/mentor/Rizwan_sir.jpg", 
         programDesignation:"Executive Member", 
-        designation:"Finance Section"
+        designation:"Finance Office"
     },
     {
         name:"Mr. Asif Iqbal",
@@ -123,7 +123,7 @@ const Teams = [
     {
         name:"Sk Kutub Uddin",
         picture:"/assets/team/volunteer/Jisan.jpg", 
-        designation:"Member"
+        designation:"Tech Assist"
     },
     {
         name:"Aadil Jabbiulla",
