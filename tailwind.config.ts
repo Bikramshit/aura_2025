@@ -68,6 +68,11 @@ module.exports = {
     			sm: 'calc(var(--radius) - 4px)'
     		},
     		keyframes: {
+				shine: {
+					'0%': { transform: 'translateX(-100%)' },
+					// '50%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(150%)' },
+				  },
     			'accordion-down': {
     				from: {
     					height: '0'
@@ -105,7 +110,8 @@ module.exports = {
     			'accordion-down': 'accordion-down 0.2s ease-out',
     			'accordion-up': 'accordion-up 0.2s ease-out',
     			marquee: 'marquee var(--duration) linear infinite',
-    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+				shine: 'shine 2s linear infinite',
     		}
     	}
     },

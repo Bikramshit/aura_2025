@@ -24,10 +24,25 @@ function LandingPage() {
                 <div className='py-[0.6rem] px-4  rounded-md flex items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center'><span className='text-[1.2rem] text-yellow-500'><FaLocationDot/></span> <span><span className='text-yellow-500 hidden md:inline'>Venue: </span> Aliah University, Newtown Campus</span> </div>
                 <div className='pb-[0.6rem] px-4  rounded-md flex items-center justify-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather'><span className='text-yellow-500 text-[1rem]'><CalendarDays size={20} /></span> <span><span className='text-yellow-500 hidden md:inline'> Event Date: </span> 25<sup>th</sup> & 27<sup>th</sup> February, 2025</span> </div>
             </div>
-        <div className='my-4 '>
-        <Link className='px-4 py-[0.45rem] rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>Submit the abstract</Link>
-        </div>
+        {/* <div className='my-4 '>
+        <Link className='px-4 py-[0.5rem] relative rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>
+        
+        <span className="absolute inset-0 w-0 bg-white opacity-20 transition-all duration-500 ease-out group-hover:w-full"></span>
+  <span className="relative">Submit the abstract <span className='hidden md:inline'>&nbsp; </span> 🚀</span>
+        </Link>
+        </div> */}
+
+        {/* <button className="relative px-6 py-[0.5rem] font-bold text-black bg-yellow-500 rounded-full overflow-hidden group">
+  <span className="absolute inset-0 w-0 bg-white opacity-20 transition-all duration-500 ease-out group-hover:w-full"></span>
+  <span className="relative">Submit the abstract <span className='hidden md:inline'>&nbsp; </span> 🚀</span>
+</button> */}
             
+            <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2">
+     <div className='py-1'>
+        <Link className='px-4  rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>Submit the abstract  <span className='hidden md:inline'>&nbsp; </span> 🚀</Link>
+        </div>
+    <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
+  </button>
         
         </div>
         

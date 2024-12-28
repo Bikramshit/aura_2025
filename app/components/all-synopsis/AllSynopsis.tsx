@@ -40,8 +40,8 @@ function AllSynopsis({synopsis}:Props) {
       </div>
        </> :  
        
-     <div className='p-4 '>
-        <Table className='border shadow-md'>
+     <div className='p-4 h-[calc(100vh - 200px)] overflow-scroll'>
+        <Table className='border shadow-md '>
       <TableHeader>
          <TableRow>
            <TableHead className="text-center">Sl No</TableHead>
@@ -54,7 +54,7 @@ function AllSynopsis({synopsis}:Props) {
            <TableHead className="text-center">Operation</TableHead>
          </TableRow>
        </TableHeader>
-       <TableBody>
+       <TableBody className='overflow-scroll'>
         {
          synopsis.map((synop, i)=>(
            <TableRow key={i} className='cursor-pointer' onClick={()=>hrefHandler(synop.id)}>
