@@ -144,11 +144,10 @@ body {
   /* background-color: #1ab691;
   transition: background-color 2s ease; */
 }
-
+/* 
 .contactUs:hover {
-  /* background-color: #003c81; */
   background: linear-gradient(152deg, rgba(0,60,129,1) 0%, rgba(12, 135, 106) 95%);
-}
+} */
 
 .reward_bg{
   background: rgb(0,0,71);

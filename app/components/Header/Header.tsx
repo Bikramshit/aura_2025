@@ -24,7 +24,7 @@ function Header({onNavigate}:Props) {
             <Link href={"/"} className='text-[1.8rem] font-bold logo_font flex items-center gap-1'>
             <Image src={'/assets/AURA_Logo.png'} alt=''  height={100} width={100} className='h-[4rem] w-[5rem] md:h-[6rem] md:w-[8rem]' unoptimized />
             <span className='text-[#FFD700]'>A</span>URA </Link>
-            <div className='hidden md:flex items-center gap-12 text-[0.9rem] font-[500]  px-10 py-[0.6rem] rounded-full border-[#242424] border shadow-lg bg-[#020a25]'>
+            <div className='hidden lg:flex items-center gap-12 text-[0.9rem] font-[500]  px-10 py-[0.6rem] rounded-full border-[#242424] border shadow-lg bg-[#020a25]'>
                 <button className='hover:underline hover:font-semibold uppercase' onClick={()=>onNavigate("about")}>About</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("gallery")}>Gallery</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("teams")}>Teams</button>

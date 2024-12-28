@@ -52,6 +52,7 @@ function Footer() {
                     <Link href={"/Guidelines_AURA_2025.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Guidelines</Link>
                     <Link href={"/assets/AURA_Trifold_Brochure.png"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 Brochure</Link>
                     <Link href={"/assets/AURA_Sponsorship_Brochure.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Brochure</Link>
+                    <Link href={"/assets/Sponsorship_Form.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Form</Link>
                 </div>
             </div>
             <div>
