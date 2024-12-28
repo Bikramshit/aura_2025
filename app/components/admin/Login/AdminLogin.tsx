@@ -1,6 +1,6 @@
 "use client";
 import { signIn, useSession } from 'next-auth/react';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Header/Header';
 import Footer from '../../Home/Footer/Footer';
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useRouter } from 'next/navigation';
+import { Loader } from 'lucide-react';
 
 
 
@@ -35,6 +36,8 @@ const formSchema = z.object({
 
 
 function AdminLogin() {
+
+  const [loading, setLoading] = useState(false);
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -52,14 +55,14 @@ function AdminLogin() {
       }
 
       async function onSubmit(values: z.infer<typeof formSchema>) {
-     
+        setLoading(true);
         const {username, password} = values;
         const res =await signIn("credentials", {
             redirect:false,
             email:username,
             password
           });
-        
+        setLoading(false);
       }
 
       const onNavigate =()=>{
@@ -101,7 +104,11 @@ function AdminLogin() {
             </FormItem>
           )}
         />
-        <Button type="submit" className='w-full bg-blue-600 hover:bg-blue-600 font-semibold '>Submit</Button>
+        {
+          loading ?  <Button type="submit" className='w-full bg-blue-600 hover:bg-blue-600 font-semibold ' disabled><Loader className='animate-spin' /> Loading</Button> :
+          <Button type="submit" className='w-full bg-blue-600 hover:bg-blue-600 font-semibold '>Submit</Button>
+        }
+        
       </form>
     </Form>
     </div>

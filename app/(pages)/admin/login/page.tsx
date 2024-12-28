@@ -7,7 +7,6 @@ async function Page() {
 
   const profile =await myProfile();
 
-  console.log("Profile:::: ", profile);
 
   if(profile){
     redirect('/dashboard');

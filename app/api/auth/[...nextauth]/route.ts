@@ -35,12 +35,38 @@ export const authOptions:NextAuthOptions = {
     ], 
    
     callbacks: {
-        async jwt({ token, user }) {
-          if (user) {
-            token.id = user.id;
-          }
-          return token;
+        async jwt({token, user, account, profile}){
+           
+            if(profile){
+                const user = await db.user.findUnique({
+                    where:{
+                        email:profile.email
+                    },
+                });
+                if(!user){
+                    throw new Error("User not found");
+                    
+                }
+                token.id = user.id;
+            }else if(token){
+                const user = await db.user.findUnique({
+                    where:{
+                        email:token?.email as string
+                    }
+                })
+                if(!user){
+                    throw new Error("User not found");
+                }
+                token.id = user.id;
+            }
+            return token;
         },
+        // async jwt({ token, user }) {
+        //   if (user) {
+        //     token.id = user.id;
+        //   }
+        //   return token;
+        // },
         async session({ session, token }) {
             
           if (token) {
