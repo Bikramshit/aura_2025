@@ -21,17 +21,22 @@ export const myProfile = async()=>{
        
         const cookieStore =await cookies();
         const token = cookieStore.get('token')?.value || '';
-        console.log("Token::",token);
+        // const googleToken = cookieStore.get('next-auth.csrf-token')?.value || '';
+        const googleToken = cookieStore.get('next-auth.session-token')?.value || '';
+        const googleServerToken = cookieStore.get('__Secure-next-auth.session-token')?.value || '';
 
-        let userId = '';
-        if(token!=='' && token!=null){
+        let userId = ''
+        if(token!=='' && token!==null){
             userId = getUserIDFromToken(token);
-            console.log("UserId::",userId);
-        }
+       }
+       else if((googleToken!==null && googleToken!=='') || (googleServerToken!==null && googleServerToken!=='')){
+            const session =await getUserSesssion();
+            
+            if(session===undefined) return;
+            userId = session.id;
+       }
 
-        const session =await getUserSesssion();
-        if(session===undefined) return;
-         userId = session.id;
+       if(userId===''){return}
        
 
         const user = await db.user.findUnique({
