@@ -30,7 +30,7 @@ function Header({onNavigate}:Props) {
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("teams")}>Teams</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Contact Us</button>
                 <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("footer")}>Resources</button>
-                <Link href={'/assets/SponsorshipForm.pdf'} target='_blank' className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Sponsor</Link>
+                {/* <Link href={'/assets/SponsorshipForm.pdf'} target='_blank' className='hover:underline hover:font-semibold uppercase' >Sponsor</Link> */}
                 {/* <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("contactUS")}>Contact Us</button> */}
                 {/* <button className='hover:underline hover:font-semibold uppercase'  onClick={()=>onNavigate("about")}>FAQ</button> */}
        
