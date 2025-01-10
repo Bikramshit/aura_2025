@@ -49,6 +49,8 @@ function AdminLogin() {
       const router = useRouter();
 
       const {data:session, status} = useSession();
+
+      console.log(status);
     
       if(status==="authenticated"){
         router.push("/dashboard");
@@ -62,6 +64,8 @@ function AdminLogin() {
             email:username,
             password
           });
+
+          console.log(res);
         setLoading(false);
       }
 
