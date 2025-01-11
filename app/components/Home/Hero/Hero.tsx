@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaLocationDot } from 'react-icons/fa6';
 import { SlCalender } from 'react-icons/sl';
-
+import {GiAbstract091} from "react-icons/gi"
 
 function LandingPage() {
 
@@ -25,10 +25,21 @@ function LandingPage() {
       
             <div className='mt-0 md:mt-8 text-center'>
                 <div className='py-[0.6rem] px-4  rounded-md flex items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center'><span className='text-[1.2rem] text-yellow-500'><FaLocationDot/></span> <span><span className='text-yellow-500 hidden md:inline'>Venue: </span> Aliah University, Newtown Campus</span> </div>
-                <div className='pb-[0.6rem] px-4  rounded-md flex items-center justify-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather'><span className='text-yellow-500 text-[1rem]'><CalendarDays size={20} /></span> <span><span className='text-yellow-500 hidden md:inline'> Event Date: </span> 25<sup>th</sup> & 27<sup>th</sup> February, 2025</span> </div>
+                <div className='pb-[0.6rem] px-4  rounded-md flex items-center justify-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather'>
+                  <span className='flex items-center gap-1'>
+                  <span className='text-yellow-500 text-[1rem]'><CalendarDays size={20} /></span> <span><span className='text-yellow-500 '> Event Date: </span>
+                    </span> 25<sup>th</sup> & 27<sup>th</sup> February, 2025</span> </div>
             </div>
       
-        
+        <div>
+          <div className='pb-[0.6rem] px-4  rounded-md flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center '>
+            <span className='text-yellow-500 hidden md:inline text-[1.2rem]'><GiAbstract091/></span>
+            <span className='text-yellow-500 flex items-center gap-1'> <span className='inline md:hidden text-[1.2rem]'><GiAbstract091/></span> Abstract Submission Deadline:</span> 
+            <div>
+            <span className='line-through decoration-red-500 decoration-[2px] text-[0.9rem]'>10<sup className=''>th</sup> January</span> <span>25<sup>th</sup> January, 2025</span></div>
+            </div>
+            
+        </div>
   
             
             <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2" onClick={onHref}>
