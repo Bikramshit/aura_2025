@@ -1,4 +1,4 @@
-import { Book, Home, Inbox, Search, Settings, MessageCircle, Smartphone, LogOut, FileVideo } from "lucide-react"
+import { Book, Home, Inbox, Users, Search, Settings, MessageCircle, Smartphone, LogOut, FileVideo } from "lucide-react"
 
 import {
   Sidebar,
@@ -32,6 +32,11 @@ const items = [
     title: "Selected Synopsis",
     url: "/selected-synopsis",
     icon: Inbox,
+  },
+  {
+    title: "Registered Teams",
+    url: "/registered-teams",
+    icon: Users,
   },
 
   {

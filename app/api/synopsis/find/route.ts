@@ -15,6 +15,7 @@ export const POST = async(req:NextRequest)=>{
         const abstract = await db.synopsis.findFirst({
             where:{
                 registrationId:abstractId, 
+                approved:true,
                 members:{
                     some:{
                         whatsappNo:mobileNo
@@ -35,9 +36,22 @@ export const POST = async(req:NextRequest)=>{
         }
 
 
+        const registration = await db.registration.findFirst({
+            where:{
+                synopsisId:abstract.id
+            }
+        });
+
+        let isFound = false;
+        if(registration){
+            isFound = true;
+        }
+
+
         return NextResponse.json({
             success:true,
-            abstract
+            abstract, 
+            isFound:isFound
         }, {status:200});
 
 
