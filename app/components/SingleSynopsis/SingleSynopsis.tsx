@@ -1,7 +1,7 @@
 "use client";
 
 import { Member, Synopsis } from '@prisma/client';
-import React from 'react';
+import React, { useState } from 'react';
 import DashboardComponent from '../Dashboard/DashboardComponent';
 import Link from 'next/link';
 import {
@@ -14,6 +14,10 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import { Button } from '@/components/ui/button';
+import axios from 'axios';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { useRouter } from 'next/navigation';
 
 interface Props {
     synopsis:Synopsis & {
@@ -22,12 +26,33 @@ interface Props {
 }
 
 function SingleSynopsis({synopsis}:Props) {
+
+
+    const [loading, setLoading] = useState(false);
+
+    const router = useRouter();
+
+    const SelectAbstract = async()=>{
+        try {
+            setLoading(true);
+            const res = await axios.put(`/api/synopsis/select`, {synopsisId:synopsis.id});
+            router.refresh();
+            setLoading(false);
+        } catch (error) {
+            setLoading(false);
+            console.log(error);
+        }
+    }
+
+
+    
   return (
     <>
     <DashboardComponent title={`Team Details: - ${synopsis.groupName}`}>
 
         <>
-        <div className='m-12 border shadow-md p-4 rounded-md'>
+        <div className='m-4 md:m-12 border shadow-md p-4 rounded-md'>
+            <div className='text-[1.2rem] font-semibold'> {synopsis.registrationId}</div>
             <div className='text-[1.2rem] font-semibold'> {synopsis.groupName}</div>
             <div className='text-[1rem] '>University: <span className='font-semibold'>{synopsis.university}</span></div>
             {
@@ -35,7 +60,7 @@ function SingleSynopsis({synopsis}:Props) {
             }
             
         </div>
-        <div className='mx-12 my-4 border shadow-md p-4 rounded-md'>
+        <div className='m-4 md:m-12 my-4 border shadow-md p-4 rounded-md'>
             <div className='text-[0.85rem] font-semibold uppercase'>Project Details</div>
             <div className='text-[1.2rem] font-semibold'> {synopsis.projectName}</div>
             <div>
@@ -49,22 +74,12 @@ function SingleSynopsis({synopsis}:Props) {
         </div>
 
 
-        <div className='mx-12 my-4 border shadow-md p-4 rounded-md'>
-            <div className='text-[0.9rem]'>Team Member: {synopsis.memberCount}</div>
+        <div className='m-4 md:m-12 my-4 border shadow-md p-4 rounded-md'>
+            <div className='text-[0.9rem] font-semibold mb-3'>Team Member: {synopsis.memberCount}</div>
 
 
             <div>
-                {/* {
-                    synopsis.members.map((member, i)=>(
-                        <div key={i}>
-                            <div className='my-2'>Name: {member.name}</div>
-                            <div className='my-2'>Roll No: {member.rollNo}</div>
-                            <div className='my-2'>Roll No: {member.rollNo}</div>
-                            <div className='my-2'>Roll No: {member.rollNo}</div>
-                            <div className='my-2'>Department: {member.department}</div>
-                        </div>
-                    ))
-                } */}
+               
 
         <Table className='border shadow-md'>
                      <TableRow>
@@ -94,9 +109,20 @@ function SingleSynopsis({synopsis}:Props) {
 
         </Table>
             </div>
+
+            
            
 
         </div>
+
+        <div className='m-4 md:m-12'>
+             {
+                        loading ?  <Button className="text-[1.0rem] font-semibold w-full px-4 py-[0.45rem] rounded-md bg-green-600 flex justify-center gap-2 items-center" disabled> <AiOutlineLoading3Quarters className="animate-spin text-[1.2rem]" />  Please wait </Button>
+                        :
+                        <Button className='bg-green-600 hover:bg-green-700 font-semibold w-full' disabled={synopsis.approved} onClick={SelectAbstract}> {synopsis.approved ? "Abstract is selected" : "Select Synopsis"} </Button>
+                        
+                        }
+            </div>
 
         </>
 

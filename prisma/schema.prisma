@@ -34,7 +34,7 @@ model Synopsis {
   college      String 
   memberCount  String
   members  Member[]
-  registrations  registration[]
+  registrations  Registration[]
   approved   Boolean @default(false)
   // createdAt    DateTime @default(now())
   // updatedAt    DateTime @updatedAt
@@ -56,7 +56,7 @@ model Member {
 }
 
 
-model registration {
+model Registration {
   id           String         @id @default(auto()) @map("_id") @db.ObjectId
   synopsisId String @db.ObjectId
   synopsis     Synopsis? @relation(fields: [synopsisId], references: [id])
@@ -67,7 +67,6 @@ model registration {
   university  String 
   updatedAt DateTime @updatedAt
   doneBy String
-  registrationId String
 
 
 

@@ -7,7 +7,8 @@ import bcrypt from "bcrypt";
 
 export const authOptions:NextAuthOptions = {
     session:{
-        strategy:"jwt"
+        strategy:"jwt",
+        maxAge:30*60*60*24
     },
     cookies: {
         sessionToken: {
@@ -85,6 +86,7 @@ export const authOptions:NextAuthOptions = {
           return session;
         },
       },
+      secret:process.env.NEXTAUTH_SECRET!
 }
 
 
