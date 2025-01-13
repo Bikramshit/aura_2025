@@ -131,9 +131,17 @@ function Participants() {
       
     </span>
   </div>
+  <div className="px-4 md:px-8  text-center text-[1.5rem] md:text-[2rem] font-semibold relative">
+          <span className="relative">
+            <span className="absolute left-0 right-0 bottom-[0rem] h-3 md:h-4 bg-[#484848] md:px-4"></span>
+            <span className="relative z-10 px-4">
+              <span className="logo_font text-yellow-500 ">AURA</span> - 2025
+            </span>
+          </span>
+        </div>
 
-  <div className="text-center text-[1.3rem] md:text-[1.6rem] font-semibold mt-2 text-yellow-500 font-merriweather ">
-  Selected Team Registration Form
+  <div className="text-center text-[1.4rem] md:text-[1.6rem] font-semibold mt-2 text-yellow-500 font-merriweather ">
+  Selected Team Registration 
   </div>
 
  <div className="px-4 md:px-[3rem] py-8">
@@ -206,7 +214,7 @@ function Participants() {
 
 
 
-                        <Image src={"/assets/AU_QR.jpeg"} className="h-[25rem] w-auto p-4 bg-white rounded-md" height={100} width={100} unoptimized alt="" />
+                        <Image src={"/assets/AU_QR.jpeg"} className="h-[25rem] w-auto mt-4 mb-2 p-4 bg-white rounded-md" height={100} width={100} unoptimized alt="" />
                         <div className="pt-4">
                         
                         <div className="flex items-center  gap-4">

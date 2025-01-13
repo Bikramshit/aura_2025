@@ -27,6 +27,8 @@ export const POST = async(req:NextRequest)=>{
             }
         });
 
+        console.log(abstract);
+
 
         if(!abstract){
             return NextResponse.json({
