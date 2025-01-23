@@ -101,7 +101,7 @@ const Teams = [
   
     {
         name:"Namrajit Saha",
-        picture:"/assets/team/volunteer/Narmajit.jpg", 
+        picture:"/assets/team/volunteer/Narmajit.jpeg", 
         designation:"Team Lead"
     },
     {

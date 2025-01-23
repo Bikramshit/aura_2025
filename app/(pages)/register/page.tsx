@@ -264,7 +264,7 @@ function Register() {
          }
          <div className="my-4">
             <div className="text-[0.95rem] font-semibold">
-              Upload Brief Description
+              Upload Brief Description of the Proposed Hardware Project
             </div>
             <div className="my-2">
               {" "}
