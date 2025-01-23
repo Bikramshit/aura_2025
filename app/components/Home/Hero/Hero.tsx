@@ -5,6 +5,7 @@ import React from 'react'
 import { FaLocationDot } from 'react-icons/fa6';
 import { SlCalender } from 'react-icons/sl';
 import {GiAbstract091} from "react-icons/gi"
+import { GoGoal } from "react-icons/go";
 
 function LandingPage() {
 
@@ -32,7 +33,7 @@ function LandingPage() {
             </div>
       
         <div>
-          <div className='pb-[0.6rem] px-4  rounded-md flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center '>
+          <div className='pb-[0.6rem] px-4 mb-4 rounded-md flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center '>
             <span className='text-yellow-500 hidden md:inline text-[1.2rem]'><GiAbstract091/></span>
             <span className='text-yellow-500 flex items-center gap-1'> <span className='inline md:hidden text-[1.2rem]'><GiAbstract091/></span> Abstract Submission Deadline:</span> 
             <div>
@@ -40,6 +41,10 @@ function LandingPage() {
             </div>
             
         </div>
+        
+
+
+        
   
             
             <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2" onClick={onHref}>
@@ -48,6 +53,7 @@ function LandingPage() {
         </div>
     <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
   </button>
+  
         
         </div>
         

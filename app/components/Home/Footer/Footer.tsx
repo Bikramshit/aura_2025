@@ -47,10 +47,10 @@ function Footer() {
             <div>
                 <div className='text-[0.9rem] font-semibold'>RESOURCES</div>
                 <div className='mt-4 flex flex-col'>
-                    <Link href={"/AURA_Poster.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer"> Announcement</Link>
-                    <Link href={"/assets/AURA_2025_RoadMap.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 RoadMap</Link>
-                    <Link href={"/Guidelines_AURA_2025.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Guidelines</Link>
-                    <Link href={"/assets/AURA_Trifold_Brochure.png"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 Brochure</Link>
+                    <Link href={"/AURA_2025_Poster.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer"> Announcement</Link>
+                    <Link href={"/assets/AURA_2025_ROADMAP_v.2.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 RoadMap</Link>
+                    <Link href={"/AURA_2025_Guidelines.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Guidelines</Link>
+                    <Link href={"/assets/AURA_2025_Brochure_v.2.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">AURA 2025 Brochure</Link>
                     <Link href={"/assets/AURA_Sponsorship_Brochure.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Brochure</Link>
                     <Link href={"/assets/SponsorshipForm.pdf"} className='hover:underline font-semibold font-merriweather text-yellow-500' target='_blank' rel="noopener noreferrer">Sponsorship Form</Link>
                 </div>
