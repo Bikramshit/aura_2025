@@ -33,6 +33,7 @@ model Synopsis {
   university   String 
   college      String 
   memberCount  String
+  revised Boolean?
   members  Member[]
   registrations  Registration[]
   approved   Boolean @default(false)
