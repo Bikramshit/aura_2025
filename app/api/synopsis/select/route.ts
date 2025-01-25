@@ -7,15 +7,7 @@ import { sendMail } from "@/utils/sendMail";
 
 export const PUT = async(req:NextRequest)=>{
     try {
-        //  const user =await getUserSesssion();
-
-		const user = await getUserSesssion();
-
-		console.log("user",user);
-
-         if(!user) return NextResponse.json({
-            error:"You are not authorized. "
-         }, {status:409});
+        
 
          const reqBody = await req.json();
          const {synopsisId} = reqBody;

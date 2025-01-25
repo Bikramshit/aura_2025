@@ -1,4 +1,51 @@
-<!DOCTYPE html>
+import { db } from "@/prisma";
+import { sendMail } from "@/utils/sendMail";
+import { NextRequest, NextResponse } from "next/server";
+
+
+
+
+export const POST =async(req:NextRequest)=>{
+    try {
+        const reqbody = await req.json();
+        const {synopsisId} = reqbody;
+
+
+        const synopsis = await db.synopsis.update({
+            where:{
+                id:synopsisId
+            },
+            data:{
+                revised:true
+            }
+        })
+
+         const allMembers = await db.member.findMany({
+                            where:{
+                                synopsisId:synopsisId
+                            },
+                            
+                         });
+                
+                         for(let i=0; i<allMembers.length; i++){
+                            SendMail(allMembers[i].email as string, synopsis?.groupName as string, synopsis.registrationId);
+                          }
+
+
+        return NextResponse.json({
+            success:true
+        },{status:200})
+    } catch (error) {
+        
+    }
+}
+
+
+const SendMail = (to:string, groupName:string, abstractId:string)=>{
+    try {
+
+        const subject = "AURA 2025 - Request for Additional Details with Proposed Schematic/Block Diagram";
+        const message =`<!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
 
 <head>
@@ -45,6 +92,15 @@
 		sub {
 			font-size: 75%;
 			line-height: 0;
+		}
+
+		#converted-body .list_block ul,
+		#converted-body .list_block ol,
+		.body [class~="x_list_block"] ul,
+		.body [class~="x_list_block"] ol,
+		u+.body .list_block ul,
+		u+.body .list_block ol {
+			padding-left: 20px;
 		}
 
 		@media (max-width:520px) {
@@ -160,7 +216,7 @@
 														<tr>
 															<td class="pad">
 																<div style="color:#000000;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Beskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;">This is a follow-up to our previous email. We're elated to confirm that you have successfully registered for&nbsp;<strong>AURA 2025</strong>!&nbsp;&nbsp;Congratulations on making it to this stage of the competition.</p>
+																	<p style="margin: 0;">This is in continuation of our previous communication regarding your successful&nbsp;abstract submission&nbsp;for&nbsp;<strong>AURA 2025</strong>.</p>
 																</div>
 															</td>
 														</tr>
@@ -169,16 +225,19 @@
 														<tr>
 															<td class="pad">
 																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;">We're eager to see your innovative hardware project come to life at the event. Here's a reminder of the key things you need to do to prepare:</p>
+																	<p style="margin: 0;">To ensure your project aligns well with the event guidelines and expectations, we request a more detailed submission that includes the following:</p>
 																</div>
 															</td>
 														</tr>
 													</table>
-													<table class="paragraph_block block-4" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<table class="list_block block-4" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; color: #101112; direction: ltr; font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; line-height: 120%; text-align: left; mso-line-height-alt: 19.2px;">
 														<tr>
 															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Prototype:</strong>&nbsp;Make sure your fully functional prototype is ready for the Preliminary Round on&nbsp;<strong>25th February 2025</strong>.</p>
+																<div style="margin-left:-20px">
+																	<ol start="1" style="margin-top: 0; margin-bottom: 0; list-style-type: decimal;">
+																		<li style="Margin: 0 0 0 0;"><strong>Detailed Project Overview</strong>: A concise description of your project, including its purpose, key functionalities and intended impact&nbsp;in 300-400 words.</li>
+																		<li style="Margin: 0 0 0 0;"><strong>Proposed Schematic/Block Diagram</strong>: A clear representation of the project's design and structure. This could include major components, their interconnections and overall workflow.</li>
+																	</ol>
 																</div>
 															</td>
 														</tr>
@@ -187,7 +246,7 @@
 														<tr>
 															<td class="pad">
 																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;">&nbsp;<strong>Presentation:</strong>&nbsp;Finalize your&nbsp;<strong>10-15</strong>&nbsp;slide PowerPoint presentation, highlighting your project's purpose, design, functionality and unique features.</p>
+																	<p style="margin: 0;">Please&nbsp;resubmit your proposal, along with the schematic/block diagram, by<strong>&nbsp;28th&nbsp;January 2025</strong>, so that we can evaluate it and provide feedback if necessary.</p>
 																</div>
 															</td>
 														</tr>
@@ -195,59 +254,13 @@
 													<table class="paragraph_block block-6" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
 														<tr>
 															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Poster:</strong>&nbsp;Complete your&nbsp;<strong>A1</strong>-sized poster (841 mm x 594 mm) for display. Remember, it can be printed or hand-drawn [We encourage you to go through the&nbsp;<em>Guidelines for AURA 25</em>&nbsp;for a better understanding of the process and requirements].</p>
+																<div style="color:#000000;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
+																	<p style="margin: 0;">Please send the updated abstract to&nbsp;<strong><a rel="noopener" style="text-decoration: underline; color: #7747FF;">aura.technical@aliah.ac.in</a></strong>&nbsp;by&nbsp;<strong>28th January 2025</strong>. Make sure to include your&nbsp;<strong>Abstract ID: ${abstractId}</strong>&nbsp;and mention&nbsp;<strong>"Updated Abstract - ${abstractId}"</strong>&nbsp;in the subject line of your email.</p>
 																</div>
 															</td>
 														</tr>
 													</table>
 													<table class="paragraph_block block-7" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Practice:</strong>&nbsp;Practice your 15-minute presentation to ensure a confident and engaging delivery to our judges.</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-8" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#5427d2;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Beskerville, Georgia, serif;font-size:18px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:21.599999999999998px;">
-																	<p style="margin: 0;"><strong>Important Information:</strong></p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-9" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Venue:</strong>&nbsp;2nd Floor Seminar Room, Aliah University, Newtown Campus</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-10" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Reporting Time:</strong>&nbsp;<strong>9:30 AM&nbsp;</strong>sharp on 25th February 2025.</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-11" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#2d3032;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0; margin-bottom: 16px;">We can't wait to welcome you to AURA 2025!</p>
-																	<p style="margin: 0;">Best of luck.</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-12" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
 														<tr>
 															<td class="pad">
 																<div style="color:#000000;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
@@ -257,7 +270,7 @@
 															</td>
 														</tr>
 													</table>
-													<table class="paragraph_block block-13" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													<table class="paragraph_block block-8" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
 														<tr>
 															<td class="pad">
 																<div style="color:#5a5a5a;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:15px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:center;mso-line-height-alt:18px;">
@@ -266,7 +279,7 @@
 															</td>
 														</tr>
 													</table>
-													<table class="social_block block-14" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+													<table class="social_block block-9" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 														<tr>
 															<td class="pad">
 																<div class="alignment" align="center">
@@ -297,4 +310,11 @@
 	</table><!-- End -->
 </body>
 
-</html>
+</html>`;
+          sendMail(to, subject, message);
+        
+        
+    } catch (error) {
+        
+    }
+}

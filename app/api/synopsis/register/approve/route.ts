@@ -18,6 +18,9 @@ export const POST = async(req:NextRequest)=>{
         const registation = await db.registration.findUnique({
             where:{
                 id:registrationId
+            },
+            include:{
+                synopsis:true
             }
         });
 
@@ -35,6 +38,19 @@ export const POST = async(req:NextRequest)=>{
                 verified:true
             }
         })
+
+        const allMembers = await db.member.findMany({
+                    where:{
+                        synopsisId:registation.synopsisId
+                    },
+                    
+                 });
+        
+                 for(let i=0; i<allMembers.length; i++){
+                    SendMail(allMembers[i].email as string, registation.synopsis?.groupName as string);
+                  }
+
+
 
         return NextResponse.json({
             success:true
