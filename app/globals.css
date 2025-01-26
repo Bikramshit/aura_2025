@@ -160,3 +160,11 @@ body {
   background: rgb(2,21,22);
   background: linear-gradient(312deg, rgba(2,21,22,1) 0%, rgba(29,31,108,1) 100%);
 }
+
+.gradient_bg1 {
+  background: rgb(2,0,36);
+background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32 90 102) 100%);
+
+
+
+}

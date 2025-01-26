@@ -37,7 +37,7 @@ function Reward() {
         </div>
 
         <div className='text-center font-semibold my-8 text-[1.2rem] flex flex-col items-center justify-center '>
-      <span className='flex items-center gap-1 animate-bounce'>  <span className=''><AlarmClock /> </span>Time’s ticking!</span>  <Link href={'/register'} className='bg-yellow-500 px-2 py-[0.3rem] rounded-sm text-black'>Secure your spot now!</Link>
+      <span className='flex items-center gap-1 animate-bounce'>  <span className=''><AlarmClock /> </span>Time’s ticking!</span>  <span  className='bg-yellow-500 px-2 py-[0.3rem] rounded-sm text-black'>Abstraction submission is now closed</span>
         </div>
 
 

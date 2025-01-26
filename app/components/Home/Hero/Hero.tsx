@@ -14,7 +14,7 @@ function LandingPage() {
     router.push('/register');
   }
   return (
-    <div className='font-inter  md:pb-[10rem]' >
+    <div className='font-inter  md:pb-[6rem]' >
     
         <div className='mt-16 md:mt-[10rem] flex flex-col items-center  '>
         <div className='text-center text-[2rem] md:text-[2.5rem] font-[700] text-[#dedee0] logo_font'>Aliah University Research Aspirations</div>
@@ -41,18 +41,30 @@ function LandingPage() {
             </div>
             
         </div>
-        
+        {/* <div className='font-merriweather gradient_bg1 px-4 py-[0.5rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b] '>
+          <span className='relative'>
+          <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
+          Seat booking registration opens on 26<sup>th</sup> January, 2025
+          </span>
+     
 
-
         
+        </div> */}
+                    
+                    <div className="mx-6 text-center  relative    overflow-hidden mt-2  gradient_bg1 px-4 py-[0.4rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b]" >
+     <div className='py-1'>
+        <span className='font-merriweather  px-4  rounded-md text-[#cfdef0] font-semibold  ' >Seat booking registration opens on 26<sup>th</sup> January, 2025 </span>
+        </div>
+    <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
+  </div>
   
-            
+{/*             
             <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2" onClick={onHref}>
      <div className='py-1'>
         <Link className='px-4  rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>Submit the abstract  <span className='hidden md:inline'>&nbsp; </span> 🚀</Link>
         </div>
     <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
-  </button>
+  </button> */}
   
         
         </div>

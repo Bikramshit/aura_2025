@@ -17,10 +17,15 @@ import {
 import axios from "axios";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import ContactUs from "@/app/components/Home/contactUs/ContactUs";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 
 function Register() {
+
+  redirect('/');
+
+
+
   const [groupName, setGroupName] = useState('');
   const [projectName, setProjectName] = useState('');
   const [universityName, setUniveristyName] = useState('Aliah University');

@@ -37,7 +37,7 @@ function SelectedSynopsis({synopsis}:Props) {
         {
       synopsis.length==0 ? <> 
       <div className='h-full mt-[20%] flex items-center justify-center font-semibold'>
-      No one has submitted yet.
+      No synopsis selected yet.
       </div>
        </> :  
        
