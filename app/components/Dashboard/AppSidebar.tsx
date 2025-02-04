@@ -40,6 +40,11 @@ const items = [
   },
 
   {
+    title: "Guests",
+    url: "/guests",
+    icon: Users,
+  },
+  {
     title: "Settings",
     url: "/settings",
     icon: Settings,

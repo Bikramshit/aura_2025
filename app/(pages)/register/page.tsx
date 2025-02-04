@@ -22,7 +22,7 @@ import { redirect, useRouter } from "next/navigation";
 
 function Register() {
 
-  redirect('/');
+  // redirect('/');
 
 
 
