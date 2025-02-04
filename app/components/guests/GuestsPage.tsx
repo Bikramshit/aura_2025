@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import DashboardComponent from "../Dashboard/DashboardComponent";
-import { Registration, Synopsis } from "@prisma/client";
+import { Guest, Registration, Synopsis } from "@prisma/client";
 import {
   Table,
   TableBody,
@@ -19,44 +19,16 @@ import axios from "axios";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
 
+
 interface Props {
-  teams: Registration &
-    {
-      synopsis: Synopsis;
-    }[];
+    guests:Guest[]
 }
-
-function RegisteredTeam({ teams }: Props) {
-
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const hrefHandler = (id: string) => {
-    router.push(`${id}`);
-  };
-
-  
-
-  const AprovedHandler = async (id: string) => {
-    try {
-      setLoading(true);
-      const res = await axios.post(`/api/synopsis/register/approve`, {
-        registrationId: id,
-      });
-      if(res.status===200){
-        setLoading(false);
-        router.refresh();
-      }
-    } catch (error) {
-        setLoading(false);
-        console.log(error);
-    }
-  };
-
+function GuestsPage({guests}:Props) {
   return (
     <>
-      <DashboardComponent title="Registered Team">
+     <DashboardComponent title="Registered Team">
         <>
-          {teams.length == 0 ? (
+          {guests.length == 0 ? (
             <>
               <div className="h-full mt-[10%] flex items-center justify-center font-semibold">
                 No one has registered yet.
@@ -68,13 +40,12 @@ function RegisteredTeam({ teams }: Props) {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="text-center">Sl No</TableHead>
-                    <TableHead className="text-center">Id</TableHead>
-                    <TableHead className="text-center">Team Name</TableHead>
-                    {/* <TableHead className='text-center'>Project Name</TableHead> */}
-                    <TableHead className="text-center">
-                      university Name
-                    </TableHead>
-                    <TableHead className="text-center">College Name</TableHead>
+                    <TableHead className="text-center">Name</TableHead>
+                    <TableHead className="text-center">Email</TableHead>
+                    <TableHead className="text-center">Phone No</TableHead>
+                    <TableHead className="text-center">Affiliation</TableHead>
+                    <TableHead className="text-center">Designation</TableHead>
+                   
                     <TableHead className="text-center">Transaction Id</TableHead>
                     <TableHead className="text-center">Proof</TableHead>
                     <TableHead className="text-center">Verified</TableHead>
@@ -82,36 +53,39 @@ function RegisteredTeam({ teams }: Props) {
                   </TableRow>
                 </TableHeader>
                 <TableBody className="overflow-scroll">
-                  {teams.map((team, i) => (
+                  {guests.map((team, i) => (
                     <TableRow key={i} className="cursor-pointer">
                       <TableCell className="text-center">{i + 1}</TableCell>
                       <TableCell className="text-center">
-                        {team.synopsis.registrationId}
+                        {team.name}
                       </TableCell>
                       <TableCell className="text-center">
-                        {team.synopsis.groupName}
+                        {team.email}
                       </TableCell>
                       <TableCell className="text-center">
-                        {team.synopsis.university}
+                        {team.phoneNo}
                       </TableCell>
                       <TableCell className="text-center">
-                        {team.synopsis.college}
+                        {team.affiliation}
                       </TableCell>
                       <TableCell className="text-center">
-                        {team.transactionId}
+                        {team.designation}
                       </TableCell>
                       <TableCell className="text-center">
-                        {team.synopsis.university==="Other" && <Link href={team.transactionFile} target="_blank" className="px-4 py-[0.35rem] bg-green-600 rounded text-white font-semibold">View</Link>}
+                        {team.paymentId}
+                      </TableCell>
+                      <TableCell className="text-center">
+                      <Link href={team.paymentProof} target="_blank" className="px-4 py-[0.35rem] bg-green-600 rounded text-white font-semibold">View</Link>
                         
                       </TableCell>
                       {/* <TableCell className='text-center'>{team.transactionFile}</TableCell> */}
                       <TableCell className="text-center">
-                        {team.verified ? "Verified" : "Not Verified"}
+                        {team?.verified ? "Verified" : "Not Verified"}
                       </TableCell>
                       <TableCell className="text-center flex items-center justify-center" >
-                        {
+                        {/* {
                           loading ? <AiOutlineLoading3Quarters className="animate-spin text-[1.2rem]" />  : !team.verified && <Button onClick={()=>AprovedHandler(team.id)}> Approve</Button>
-                        }
+                        } */}
                         
                       </TableCell>
                     </TableRow>
@@ -123,8 +97,9 @@ function RegisteredTeam({ teams }: Props) {
         </>
       </DashboardComponent>
     
+    
     </>
-  );
+  )
 }
 
-export default RegisteredTeam;
+export default GuestsPage

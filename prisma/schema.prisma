@@ -69,6 +69,21 @@ model Registration {
   updatedAt DateTime @updatedAt
   doneBy String
 
+}
+
+
+model Guest {
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  name         String 
+  email        String        
+  phoneNo       String 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  affiliation String
+  designation String
+  paymentId  String 
+  paymentProof String
+  verified   Boolean @default(false)
 
 
 }
