@@ -132,11 +132,11 @@ const Teams = [
     },
     
     
-    {
-        name:"Kazi Ashique Ahmed",
-        picture:"/assets/team/volunteer/Ashique.jpeg", 
-        designation:"Member"
-    },
+    // {
+    //     name:"Kazi Ashique Ahmed",
+    //     picture:"/assets/team/volunteer/Ashique.jpeg", 
+    //     designation:"Member"
+    // },
     {
         name:"Sefat Jahan",
         picture:"/assets/team/volunteer/Sefat.jpg", 
@@ -183,11 +183,11 @@ const Teams = [
     //     picture:"", 
     //     designation:"Member"
     // },
-    {
-        name:"SK Sohel Islam",
-        picture:"/assets/team/volunteer/Sohel.jpeg", 
-        designation:"Member"
-    },
+    // {
+    //     name:"SK Sohel Islam",
+    //     picture:"/assets/team/volunteer/Sohel.jpeg", 
+    //     designation:"Member"
+    // },
     {
         name:"Ariyan Sarkar",
         picture:"/assets/team/volunteer/Aryaan.jpeg", 

@@ -18,17 +18,6 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-
-
 
 interface Props {
   teams: Registration &
@@ -37,12 +26,9 @@ interface Props {
     }[];
 }
 
-function RegisteredTeam({ teams }: Props) {
+function FinalTeam({ teams }: Props) {
 
   const [loading, setLoading] = useState(false);
-  const [registrationId, setRegistrationId] = useState('');
-  const [teamName, setName] = useState('');
-  const [open, setOpen] = useState(false);
   const router = useRouter();
   const hrefHandler = (id: string) => {
     router.push(`${id}`);
@@ -50,16 +36,15 @@ function RegisteredTeam({ teams }: Props) {
 
   
 
-  const AprovedHandler = async () => {
+  const AprovedHandler = async (id: string) => {
     try {
       setLoading(true);
-      const res = await axios.post(`/api/top-12`, {
-        registrationId: registrationId,
+      const res = await axios.post(`/api/synopsis/register/approve`, {
+        registrationId: id,
       });
       if(res.status===200){
         setLoading(false);
         router.refresh();
-        setOpen(false);
       }
     } catch (error) {
         setLoading(false);
@@ -84,12 +69,12 @@ function RegisteredTeam({ teams }: Props) {
 
   return (
     <>
-      <DashboardComponent title="Registered Team">
+      <DashboardComponent title="Final Teams">
         <>
           {teams.length == 0 ? (
             <>
               <div className="h-full mt-[10%] flex items-center justify-center font-semibold">
-                No one has registered yet.
+                No teams are selected
               </div>
             </>
           ) : (
@@ -105,7 +90,7 @@ function RegisteredTeam({ teams }: Props) {
                       university Name
                     </TableHead>
                     <TableHead className="text-center">College Name</TableHead>
-                    <TableHead className="text-center">Select for Final</TableHead>
+                    <TableHead className="text-center">Selected For Final</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody className="overflow-scroll">
@@ -124,66 +109,16 @@ function RegisteredTeam({ teams }: Props) {
                       <TableCell className="text-center">
                         {team.synopsis.college}
                       </TableCell>
-                      <TableCell className="text-center flex items-center justify-center" >
-                        {
-                          loading ? <AiOutlineLoading3Quarters className="animate-spin text-[1.2rem]" />  : 
-                          
-                          <>
-                          
-                          {
-
-team.isSelected==true ? "" :
-<Button onClick={()=>{setOpen(true); setRegistrationId(team?.id);setName(team.synopsis.groupName)}}>
-  Select
-
-</Button>
-// team.isSelected==true ? "" : 
-// <Button onClick={()=>{setOpen(true); setRegistrationId(team?.id);setName(team.synopsis.groupName)}> {team.isSelected==true ? "" : "Select"} </Button> 
-}
-                          </>
-                          
-
-
-                          // <Button onClick={()=>AprovedHandler(team.id)}> Select </Button>
-
-                        }
-                        
+                      <TableCell className="text-center">
+                        {team.isSelected==true ? "Selected" : ""}
                       </TableCell>
+                      
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </div>
           )}
-
-
-
-<Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        {/* <Button variant="outline">Edit Profile</Button> */}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] text-black">
-        <DialogHeader>
-          <DialogTitle>Confirm your decision</DialogTitle>
-          
-        </DialogHeader>
-        <div className=" py-4">
-         Are you sure you want to select the team <b>{teamName}</b> for final round. You can't undo this.
-        </div>
-        <DialogFooter>
-          {
-            loading ? <AiOutlineLoading3Quarters className="animate-spin text-[1.2rem]" />  : 
-
-            <>
-            <Button type="button" onClick={()=>{setOpen(false); setRegistrationId('')}}>Cancel</Button>
-            <Button  onClick={AprovedHandler}>Confirm</Button>
-            
-            </>
-          }
-          
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
         </>
       </DashboardComponent>
     
@@ -191,4 +126,4 @@ team.isSelected==true ? "" :
   );
 }
 
-export default RegisteredTeam;
+export default FinalTeam;
