@@ -1,4 +1,4 @@
-import { Book, Home, Inbox, Users, Search, Settings, MessageCircle, Smartphone, LogOut, FileVideo } from "lucide-react"
+import { Book, Home, Inbox, Users, Search, Settings, MessageCircle, Smartphone, LogOut, FileVideo, Star } from "lucide-react"
 
 import {
   Sidebar,
@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { signOut } from "next-auth/react"
 import { usePathname } from "next/navigation"
+import { FaStar } from "react-icons/fa6"
 
 
 // Menu items.
@@ -37,6 +38,11 @@ const items = [
     title: "Registered Teams",
     url: "/registered-teams",
     icon: Users,
+  },
+  {
+    title: "Final Teams",
+    url: "/final-teams",
+    icon: Star,
   },
 
   {

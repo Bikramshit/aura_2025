@@ -1,4 +1,4 @@
-import { CalendarDays, LocateIcon } from 'lucide-react';
+import { CalendarDays, LocateIcon, PartyPopper } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react'
@@ -7,7 +7,7 @@ import { SlCalender } from 'react-icons/sl';
 import {GiAbstract091} from "react-icons/gi"
 import { GoGoal } from "react-icons/go";
 
-function LandingPage() {
+function LandingPage({onNavigate}:{onNavigate:any}) {
 
   const router = useRouter();
   const onHref =()=>{
@@ -32,31 +32,32 @@ function LandingPage() {
                     </span> 25<sup>th</sup> & 27<sup>th</sup> February, 2025</span> </div>
             </div>
       
-        <div>
-          <div className='pb-[0.6rem] px-4 mb-4 rounded-md flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-2 font-[600] font-merriweather  text-[1.0rem] justify-center '>
-            <span className='text-yellow-500 hidden md:inline text-[1.2rem]'><GiAbstract091/></span>
-            <span className='text-yellow-500 flex items-center gap-1'> <span className='inline md:hidden text-[1.2rem]'><GiAbstract091/></span> Abstract Submission Deadline:</span> 
-            <div>
-            <span className='line-through decoration-red-500 decoration-[2px] text-[0.9rem]'>10<sup className=''>th</sup> January</span> <span>25<sup>th</sup> January, 2025</span></div>
-            </div>
-            
-        </div>
-        {/* <div className='font-merriweather gradient_bg1 px-4 py-[0.5rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b] '>
-          <span className='relative'>
-          <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
-          Seat booking registration opens on 26<sup>th</sup> January, 2025
-          </span>
-     
-
-        
-        </div> */}
+       
+      
                     
-                    <div className="mx-6 text-center  relative    overflow-hidden mt-2  gradient_bg1 px-4 py-[0.4rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b]" >
+                    <div className="mx-6 text-center  relative    overflow-hidden mt-2  gradient_bg1 px-4 py-[0.4rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b] shadow-md shadow-[#b1bdb2]" >
      <div className='py-1'>
-        <span className='font-merriweather  px-4  rounded-md text-[#cfdef0] font-semibold  ' >Seat booking registration opens on 26<sup>th</sup> January, 2025 </span>
+        <span className='font-merriweather  px-4  rounded-md text-[#cfdef0] font-semibold font-merriweather ' >AURA 2025 is Live</span>
         </div>
     <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
   </div>
+
+  <button className=' hover:font-semibold ' onClick={()=>onNavigate("selectedTeam")}>
+    
+
+  <div className='flex items-center gap-0 mt-2' >
+
+<span className='text-[#f8d3eb] hidden md:inline animate-pulse'><PartyPopper/></span>
+<div className='p-4 font-merriweather px-4 animate-pulse bg-gradient-to-r from-[#f8d3eb] to-[#56f76e] bg-clip-text text-transparent font-bold drop-shadow-lg md:text-[1.1rem]'>
+The finalist teams have been announced
+</div>
+<span className='text-[#56f76e]  hidden md:inline animate-pulse'><PartyPopper/></span>
+</div>
+
+
+  </button>
+
+ 
   
 {/*             
             <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2" onClick={onHref}>

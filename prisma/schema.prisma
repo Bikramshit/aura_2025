@@ -64,6 +64,7 @@ model Registration {
   transactionId  String 
   transactionFile String?
   verified Boolean @default(false)
+  isSelected Boolean @default(false)
   createdAt DateTime @default(now())
   university  String 
   updatedAt DateTime @updatedAt
