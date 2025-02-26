@@ -16,7 +16,7 @@ function LandingPage({onNavigate}:{onNavigate:any}) {
   return (
     <div className='font-inter  md:pb-[6rem]' >
     
-        <div className='mt-16 md:mt-[9rem] flex flex-col items-center  '>
+        <div className='mt-16 md:mt-[7rem] flex flex-col items-center  '>
         <div className='text-center text-[2rem] md:text-[2.5rem] font-[700] text-[#dedee0] logo_font'>Aliah University Research Aspirations</div>
         <div className='text-[1rem] md:text-[1.2rem]  text-[#949494] p-4 text-center font-semibold md:mx-[5rem]'>
         <div className='md:w-[730px]'>
