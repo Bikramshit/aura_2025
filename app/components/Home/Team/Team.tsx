@@ -164,7 +164,7 @@ const Teams = [
     },
     {
         name:"Md Shaif Ali",
-        picture:"/assets/team/volunteer/Shaif.jpeg", 
+        picture:"https://res.cloudinary.com/dbzpzmxpd/image/upload/v1740193792/Mdshaifali_jpg_sfoavt.jpg", 
         designation:"Member"
     },
     {
