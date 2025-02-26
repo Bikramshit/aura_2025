@@ -16,7 +16,7 @@ function LandingPage({onNavigate}:{onNavigate:any}) {
   return (
     <div className='font-inter  md:pb-[6rem]' >
     
-        <div className='mt-16 md:mt-[10rem] flex flex-col items-center  '>
+        <div className='mt-16 md:mt-[9rem] flex flex-col items-center  '>
         <div className='text-center text-[2rem] md:text-[2.5rem] font-[700] text-[#dedee0] logo_font'>Aliah University Research Aspirations</div>
         <div className='text-[1rem] md:text-[1.2rem]  text-[#949494] p-4 text-center font-semibold md:mx-[5rem]'>
         <div className='md:w-[730px]'>
@@ -56,6 +56,31 @@ The finalist teams have been announced
 
 
   </button>
+  <div className='pb-4 mx-4 mt-2'>
+  <button className="btn cube cube-hover" type="button" onClick={()=>onNavigate("day1")}>
+  <div className="bg-top">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="bg-right">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="bg">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="text">Preliminary Round  (25<sup>th</sup>Feb)</div>
+</button>
+  </div>
+  
+
+  {/* <button className=' hover:font-semibold ' onClick={()=>onNavigate("DAY1")}>
+    
+
+  <div className='flex items-center gap-0 ' >
+    <div className='logo_font text-[#ffc32a] px-4 py-[0.4rem] font-semibold rounded-md bg-[#0e1c54] shadow-xl'>DAY 1</div>
+</div>
+
+
+  </button> */}
 
  
   

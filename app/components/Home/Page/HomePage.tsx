@@ -13,6 +13,7 @@ import Team from '../Team/Team';
 import ContactUs from '../contactUs/ContactUs';
 import Footer from '../Footer/Footer';
 import { Registration } from '@prisma/client';
+import Day1 from '../Day1/Day1';
 
 
 function HomePage() {
@@ -38,6 +39,10 @@ function HomePage() {
   
    <div id='selectedTeam'>
    <SelectedTeams  />
+   </div>
+
+   <div id='day1'>
+   <Day1  />
    </div>
 
    <div id='gallery'>
