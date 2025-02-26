@@ -24,7 +24,7 @@ const Mentors = [
     },
     {
         name:"Dr. Mukandar Sekh",
-        picture:"https://aliah.ac.in//upload/people_profile/25-05-19_1558767613.jpeg", 
+        picture:"https://res.cloudinary.com/dbzpzmxpd/image/upload/v1740140438/IMG-20250219-WA0192_g1g5ww.jpg", 
         programDesignation:"Co-Convener",
         designation:"Associate Professor, Dept. of Mechanical Engineering"
     },
@@ -87,7 +87,17 @@ const Teams = [
         picture:"/assets/team/volunteer/1.jpg", 
         designation:"Lead Organizer"
     },
-  
+    {
+        name:"MD Abdul Latif ",
+        picture:"https://res.cloudinary.com/dbzpzmxpd/image/upload/v1740140349/IMG-20250219-WA0018_fu18bn.jpg", 
+        designation:"Lead Organizer"
+    },
+    {
+        name:"Sohail Hasan ",
+        picture:"https://res.cloudinary.com/dbzpzmxpd/image/upload/v1740140348/IMG-20250220-WA0003_il4joy.jpg", 
+        designation:"Lead Organizer"
+    },
+    
     {
         name:"Kaustav Chakraborty",
         picture:"/assets/team/volunteer/Kaustab.jpg", 
@@ -114,6 +124,11 @@ const Teams = [
         name:"Mohd Sajid Siddiqui",
         picture:"/assets/team/volunteer/Sajid.jpeg", 
         designation:"Team Lead"
+    },
+    {
+        name:"Naim mallick",
+        picture:"https://res.cloudinary.com/dbzpzmxpd/image/upload/v1740140349/IMG-20250219-WA0020_wv6kul.jpg", 
+        designation:"Member"
     },
     {
         name:"Sayani Banarjee",
