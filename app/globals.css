@@ -421,7 +421,7 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 
 .tracker {
   position: absolute;
-  z-index: 200;
+  z-index: 20;
   width: 100%;
   height: 100%;
 }
@@ -448,7 +448,7 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 .canvas {
   perspective: 800px;
   inset: 0;
-  z-index: 200;
+  z-index: 20;
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -952,7 +952,7 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 }
 
 .cube:active {
-  z-index: 9999;
+  z-index: 20;
   animation: bounce 0.1s linear;
 }
 
