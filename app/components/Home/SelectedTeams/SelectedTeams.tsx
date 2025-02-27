@@ -8,7 +8,7 @@ import React from 'react';
 const Items = [
     {
         "Abstract_Id":"AURA2025001", 
-        "GroupName":"STERNRTTERS",
+        "GroupName":"STERNRITTERS",
         "Photo":"/assets/top_12/sterntritters.jpg"
     },
     {

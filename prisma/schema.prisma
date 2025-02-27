@@ -36,6 +36,7 @@ model Synopsis {
   revised Boolean?
   members  Member[]
   registrations  Registration[]
+  votes  Vote[]  
   approved   Boolean @default(false)
   // createdAt    DateTime @default(now())
   // updatedAt    DateTime @updatedAt
@@ -87,4 +88,26 @@ model Guest {
   verified   Boolean @default(false)
 
 
+}
+
+
+model Vote {
+    id           String         @id @default(auto()) @map("_id") @db.ObjectId
+    name         String
+    email        String   @unique
+    rollNo       String?
+    synopsisId   String @db.ObjectId
+    synopsis     Synopsis? @relation(fields: [synopsisId], references: [id])
+    abstractId  String
+  codeId      String @db.ObjectId
+  code        VotingCode @relation(fields: [codeId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model VotingCode {
+    id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  code      String   @unique
+  used      Boolean  @default(false)
+
+  Vote Vote[]
 }

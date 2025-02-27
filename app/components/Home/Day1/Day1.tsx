@@ -9,7 +9,6 @@ import { Download, X } from 'lucide-react';
 
 
 const Items = [
-    "https://foxcolab.s3.ap-south-1.amazonaws.com/DSC01139+(1).jpg",
     "/assets/day_1/IMG_3064.jpg",
     "/assets/day_1/IMG_3072.jpg",
     "/assets/day_1/IMG_3087.jpg",
@@ -151,46 +150,9 @@ function Day1() {
           </motion.div>
         ))}
 
-   {/* {Items.map((src, index) => (
-          <motion.div key={index} whileHover={{ scale: 1.05 }}>
-            <Dialog>
-              <DialogTrigger>
-                <Image
-                  src={src}
-                  alt={`Gallery Image ${index + 1}`}
-                  width={200}
-                  height={200}
-                  className="w-full h-auto rounded-lg cursor-pointer"
-                  onClick={() => setSelectedImage(src)}
-                />
-              </DialogTrigger>
-              <DialogContent className="w-screen h-screen flex items-center justify-center">
-                <Image src={selectedImage} alt="Selected" width={800} height={600} className="w-full h-full object-contain" />
-              </DialogContent>
-            </Dialog>
-          </motion.div>
-        ))} */}
+   
 
-
-        {/* {Items.map((src, index) => (
-          <motion.div key={index} whileHover={{ scale: 1.05 }}>
-            <Dialog>
-              <DialogTrigger>
-                <Image
-                  src={src}
-                  alt={`Gallery Image ${index + 1}`}
-                  width={200}
-                  height={200}
-                  className="w-full h-auto rounded-lg cursor-pointer"
-                  onClick={() => setSelectedImage(src)}
-                />
-              </DialogTrigger>
-              <DialogContent>
-                <Image src={selectedImage as  String} alt="Selected" width={800} height={600} className="w-full h-auto" />
-              </DialogContent>
-            </Dialog>
-          </motion.div>
-        ))} */}
+        
       </div>
           </div>
       );

@@ -22,13 +22,19 @@ async function page() {
 
 
 
-    const synopsis = await db.synopsis.findMany();
+    const vote = await db.vote.findMany({
+      include:{
+        synopsis:true
+      }
+    });
+
+
 
 
   return (
     <>
     
-    <Dashboard synopsis={synopsis} />
+    <Dashboard votes={vote} />
     
     </>
   )
