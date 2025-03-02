@@ -2,7 +2,7 @@ import { CalendarDays, LocateIcon, PartyPopper } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react'
-import { FaLocationDot } from 'react-icons/fa6';
+import { FaAward, FaLocationDot } from 'react-icons/fa6';
 import { SlCalender } from 'react-icons/sl';
 import {GiAbstract091} from "react-icons/gi"
 import { GoGoal } from "react-icons/go";
@@ -34,29 +34,36 @@ function LandingPage({onNavigate}:{onNavigate:any}) {
       
        
       
-                    
+{/*                     
                     <div className="mx-6 text-center  relative    overflow-hidden mt-2  gradient_bg1 px-4 py-[0.4rem] rounded-md text-[#cfdef0] font-semibold border-[#404a4b] shadow-md shadow-[#b1bdb2]" >
      <div className='py-1'>
         <span className='font-merriweather  px-4  rounded-md text-[#cfdef0] font-semibold font-merriweather ' >AURA 2025 is Live</span>
         </div>
     <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
-  </div>
+  </div> */}
 
-  <button className=' hover:font-semibold ' onClick={()=>onNavigate("selectedTeam")}>
-    
+  <button className=' hover:font-semibold center' onClick={()=>onNavigate("winners")}>
+  <div className='flex items-center gap-0 mt-2 justify-center' >
 
-  <div className='flex items-center gap-0 mt-2' >
+<span className='text-[#e64bc2] hidden md:inline  '><PartyPopper/></span>
+<div className='px-4 font-merriweather  bg-gradient-to-r from-[#e64bc2] to-[#ff8b16] bg-clip-text text-transparent font-bold drop-shadow-lg md:text-[1.15rem]'>
+Winner of AURA 2025 
+</div>
+<span className='text-[#ff8b16]  hidden md:inline '><PartyPopper/></span>
+</div>
 
-<span className='text-[#f8d3eb] hidden md:inline animate-pulse'><PartyPopper/></span>
+  <div className='flex items-center gap-0 ' >
+
+<span className='text-[#f8d3eb] hidden md:inline animate-pulse'><FaAward /></span>
 <div className='p-4 font-merriweather px-4 animate-pulse bg-gradient-to-r from-[#f8d3eb] to-[#56f76e] bg-clip-text text-transparent font-bold drop-shadow-lg md:text-[1.1rem]'>
 The finalist teams have been announced
 </div>
-<span className='text-[#56f76e]  hidden md:inline animate-pulse'><PartyPopper/></span>
+<span className='text-[#56f76e]  hidden md:inline animate-pulse'><FaAward/></span>
 </div>
 
 
   </button>
-  <div className='pb-4 mx-4 mt-2'>
+  {/* <div className='pb-4 mx-4 mt-2'>
   <button className="btn cube cube-hover" type="button" onClick={()=>onNavigate("day1")}>
   <div className="bg-top">
     <div className="bg-inner"></div>
@@ -69,28 +76,25 @@ The finalist teams have been announced
   </div>
   <div className="text">Preliminary Round  (25<sup>th</sup>Feb)</div>
 </button>
+  </div> */}
+
+  <div className='pb-4 mx-4 mt-2'>
+  <button className="btn cube cube-hover" type="button" onClick={()=>onNavigate("day1")}>
+  <div className="bg-top">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="bg-right">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="bg">
+    <div className="bg-inner"></div>
+  </div>
+  <div className="text text-[#f8f8f8]">Winners   (Final Day - 27<sup>th</sup>Feb)</div>
+</button>
   </div>
   
 
-  {/* <button className=' hover:font-semibold ' onClick={()=>onNavigate("DAY1")}>
-    
-
-  <div className='flex items-center gap-0 ' >
-    <div className='logo_font text-[#ffc32a] px-4 py-[0.4rem] font-semibold rounded-md bg-[#0e1c54] shadow-xl'>DAY 1</div>
-</div>
-
-
-  </button> */}
-
  
-  
-{/*             
-            <button className="relative  text-white bg-[#FFD700] text-2xl font-bold tracking-wide  rounded-full overflow-hidden mt-2" onClick={onHref}>
-     <div className='py-1'>
-        <Link className='px-4  rounded-full bg-[#FFD700] font-semibold text-[#1f2020] text-[1.0rem]' href={"/register"}>Submit the abstract  <span className='hidden md:inline'>&nbsp; </span> 🚀</Link>
-        </div>
-    <span className="absolute top-0 left-0 w-[300px] h-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-shine"></span>
-  </button> */}
   
         
         </div>

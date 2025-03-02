@@ -1,9 +1,13 @@
 import Vote from '@/app/components/Vote/Vote'
 import { db } from '@/prisma'
+import { redirect } from 'next/navigation';
 import React from 'react'
 
 async function page() {
 
+
+    // redirect('/');
+  
     const abstractIds = [
         "AURA2025001",
         "AURA2025008",

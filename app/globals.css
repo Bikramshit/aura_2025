@@ -172,6 +172,10 @@ body {
   background: rgb(11, 21, 50);
   background: linear-gradient(130deg, rgb(4, 71, 118) 0%, rgb(46, 15, 62) 95%);
 }
+.winner_bg {
+  background: rgb(11, 21, 50);
+  background: linear-gradient(175deg, rgb(237, 198, 130) 0%, rgb(50, 65, 58) 60%);
+}
 
 .selected_item_bg {
   background: rgb(13, 57, 60);
@@ -866,6 +870,7 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
   outline: none;
   border: 0;
   color: #d4af37;
+
   letter-spacing: 0.1em;
   font-family: monospace;
   font-size: 15px;
@@ -882,7 +887,9 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 .cube .bg-top {
   position: absolute;
   height: 10px;
-  background: #d4af37;
+  /* background: #d4af37;  */
+  background: white;
+
   bottom: 100%;
   left: 5px;
   right: -5px;
@@ -901,13 +908,14 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
   bottom: 0;
   top: 0;
   right: 0;
-  background: #d4af37;
+  /* background: #d4af37; */
+  background-color: white;
   transition: all 0.4s;
 }
 
 .cube .bg-right {
   position: absolute;
-  background: #d4af37;
+  background: white;
   top: -5px;
   z-index: 0;
   bottom: 5px;
@@ -922,7 +930,9 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 }
 
 .cube .bg-inner {
-  background: #031533;
+  /* background: #530149; */
+  background-image: linear-gradient(to top, #e89944 0%, #f6db8a 100%);
+
   position: absolute;
   left: 2px;
   right: 2px;
@@ -941,14 +951,14 @@ background:linear-gradient(90deg, rgb(21 16 108) 0%, rgba(9,9,121,1) 35%, rgb(32
 }
 
 .cube:hover .text {
-  color: #28282d;
+  color: #fdfdfd;
   transition: all 0.4s;
 }
 
 .cube:hover .bg-right,
 .cube:hover .bg,
 .cube:hover .bg-top {
-  background: #031533;
+  background: #f3f4f5;
 }
 
 .cube:active {
