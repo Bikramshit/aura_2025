@@ -14,6 +14,7 @@ import ContactUs from '../contactUs/ContactUs';
 import Footer from '../Footer/Footer';
 import { Registration } from '@prisma/client';
 import Day1 from '../Day1/Day1';
+import Winners from '../Winners/Winners';
 
 
 function HomePage() {
@@ -37,6 +38,9 @@ function HomePage() {
    <SecondHero />
    </div>
   
+  <div id="winners">
+    <Winners />
+  </div>
    <div id='selectedTeam'>
    <SelectedTeams  />
    </div>
