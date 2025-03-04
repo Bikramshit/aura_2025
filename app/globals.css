@@ -174,7 +174,7 @@ body {
 }
 .winner_bg {
   background: rgb(11, 21, 50);
-  background: linear-gradient(175deg, rgb(237, 198, 130) 0%, rgb(50, 65, 58) 60%);
+  background: linear-gradient(175deg, rgb(240, 178, 71) 0%, rgb(21, 30, 26) 60%);
 }
 
 .selected_item_bg {

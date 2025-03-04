@@ -12,7 +12,12 @@ async function page() {
           redirect('/');
         }
 
-    const synopsis = await db.synopsis.findMany();
+    const synopsis = await db.synopsis.findMany({
+      include:{
+        members:true
+      }
+    });
+    
   return (
     <>
     
