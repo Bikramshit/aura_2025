@@ -47,7 +47,7 @@ function LandingPage({onNavigate}:{onNavigate:any}) {
 
 <span className='text-[#e64bc2] hidden md:inline  '><PartyPopper/></span>
 <div className='px-4 font-merriweather  bg-gradient-to-r from-[#e64bc2] to-[#ff8b16] bg-clip-text text-transparent font-bold drop-shadow-lg md:text-[1.15rem]'>
-Winner of AURA 2025 
+Winners of AURA 2025 
 </div>
 <span className='text-[#ff8b16]  hidden md:inline '><PartyPopper/></span>
 </div>
@@ -79,7 +79,7 @@ The finalist teams have been announced
   </div> */}
 
   <div className='pb-4 mx-4 mt-2'>
-  <button className="btn cube cube-hover" type="button" onClick={()=>onNavigate("day1")}>
+  <button className="btn cube cube-hover" type="button" onClick={()=>onNavigate("winners")}>
   <div className="bg-top">
     <div className="bg-inner"></div>
   </div>
