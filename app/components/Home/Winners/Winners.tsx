@@ -194,7 +194,7 @@ const Items = [
   "/assets/winners/c2/IMG_3745 Large.jpeg",
   "/assets/winners/c2/IMG_3746 Large.jpeg",
   "/assets/winners/c2/IMG_3748 Large.jpeg",
-  "/assets/winners/c2/IMG_3749 Large.jpeg",
+  // "/assets/winners/c2/IMG_3749 Large.jpeg",
   "/assets/winners/c2/IMG_3778 Large.jpeg",
   "/assets/winners/c2/IMG_3780 Large.jpeg",
   "/assets/winners/c2/IMG_3782 Large.jpeg",
