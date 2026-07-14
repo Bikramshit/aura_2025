@@ -98,10 +98,3 @@ AURA 2025 is a modern, high-performance web application designed to manage proje
 - `utils/` - Global utility and helper functions.
 
 ---
-
-## ⚠️ Security Notice
-
-> [!WARNING]
-> If you have accidentally committed your `.env` file with active credentials in the past:
-> 1. Ensure you run a history purge (e.g., using `git-filter-repo` and force pushing).
-> 2. **Always rotate your secrets immediately** (generate a new database password, new Cloudinary API secrets, new NextAuth secrets, and new Gmail app passwords). Do not continue to use the compromised credentials in production.
